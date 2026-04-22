@@ -681,16 +681,21 @@
 			<skill id="2135" level="1" /> <!-- Hair Style Change Potion -->
 		</skills>
 	</item>
-	<item id="5249" type="EtcItem" name="Commemorative Item: First Anniversary of Lineage II Service">
-		<!-- After the conclusion of the event, this item is traded for an actual item through a drawing. -->
+	<item id="5249" type="EtcItem" name="Meraki VIP">
 		<set name="icon" val="icon.etc_l2_i00" />
-		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="RUNE" />
 		<set name="material" val="CLOTH" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
+		<set name="is_destroyable" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="duration" val="43200" />
+		<skills>
+			<skill id="9000" level="1" />
+		</skills>
 	</item>
 	<item id="5250" type="EtcItem" name="Greater Compressed Package of Soulshots: No-grade">
 		<!-- A small package of compressed soulshots. Upon use, changes into 1000 No-grade soulshots. -->

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="9000" levels="1" name="Spirit of Meraki">
+		<!-- Passive VIP Skill: Enhanced stats against monsters. -->
+		<icon>icon.skill1323</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<magicLevel>1</magicLevel>
+		<effects>
+			<effect name="Buff">
+				<!-- PvE Only Stats -->
+				<mul stat="pvePhysDmg" value="1.1" />
+				<mul stat="pveMagicalDmg" value="1.1" />
+				<mul stat="pvePhysSkillsDmg" value="1.1" />
+				<!-- Global Stats -->
+				<mul stat="pAtkSpd" value="1.1" />
+				<mul stat="mAtkSpd" value="1.1" />
+				<mul stat="maxLoad" value="1.5" />
+			</effect>
+		</effects>
+	</skill>
+</list>
