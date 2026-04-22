@@ -1,154 +1,46 @@
-# ⚔️ L2 Meraki — Lineage 2 Interlude Server
+# L2 Meraki - Lineage 2 Interlude (C6)
 
-<p align="center">
-  <strong>Un servidor de Lineage 2 Interlude diseñado para una experiencia competitiva, sustentable y con identidad propia.</strong>
-</p>
+![Status](https://img.shields.io/badge/Status-Development-orange)
+![Version](https://img.shields.io/badge/Chronicle-Interlude-blue)
+![Rates](https://img.shields.io/badge/Rates-x15-green)
 
----
+L2 Meraki es un proyecto de servidor de Lineage 2 Interlude enfocado en la sostenibilidad económica y el balance competitivo. Basado en L2J Mobius, este servidor implementa mecánicas personalizadas para ofrecer una experiencia mid-rate equilibrada.
 
-## 📋 Descripción
+## 🚀 Identidad del Proyecto
 
-**L2 Meraki** es un servidor privado de Lineage 2 basado en la crónica **Interlude** (C6), construido sobre el emulador [L2jMobius](https://www.l2jmobius.org/).
+- **Crónica:** Interlude (C6)
+- **Rate Principal:** x15 (Balanced Mid-Rate)
+- **Enfoque:** Economía real, PvP dinámico y progresión de clanes.
 
-El nombre "Meraki" (del griego *μεράκι*) significa hacer algo con alma, creatividad y amor — lo que define nuestra filosofía de desarrollo.
+## 📊 Configuración de Rates
 
-### 🎯 Filosofía del Servidor
-- **Economía sustentable**: Rates balanceados que incentivan el farmeo y el mercado entre jugadores.
-- **Anti Pay-to-Win**: Sistema VIP que otorga comodidad, no poder.
-- **Competitividad real**: Balanceo de clases, Olympiad activa y eventos PvP regulares.
-- **Comunidad primero**: Límites anti-zerg, soporte activo y transparencia total.
+- **Exp / SP:** x15
+- **Adena:** x8 (Escasez controlada para evitar inflación)
+- **Drop General:** x10
+- **Spoil:** x12 (Fomento del mercado de materiales)
+- **Quest Rewards:** x3 (Prevención de abuso de quests)
 
----
+## ⚔️ Características Destacadas
 
-## ⚙️ Configuración del Servidor
+- **Sistema de Buffs:** 20+4 slots. Buffs de 1ra y 2da clase gratis (1h). Dances/Songs con costo en Adena. Buffs de 3ra clase exclusivos de support real.
+- **VIP Pack (Meraki Blessing):** Rates mejorados (x20 Exp), 3 ventanas permitidas, buffs de 2h y efectos visuales exclusivos.
+- **Enchant System:** Safe +3, Full Body +4, Max +16. Success rate fijo del 66%.
+- **Anti-Zerg:** Límite de 45 miembros por clan y 2 clanes por alianza.
 
-### Rates
-| Rate | Valor | Estrategia |
-|---|:---:|---|
-| **EXP / SP** | x15 | Ritmo de leveo dinámico |
-| **Adena** | x8 | Escasez controlada — incentiva el comercio |
-| **Drop General** | x10 | Items accesibles pero no regalados |
-| **Spoil** | x12 | Incentiva dwarfs y mercado de materiales |
-| **Quest Rewards** | x3 | Evita abuso de quests de adena |
+## 📁 Documentación
 
-### Stack Tecnológico
-| Componente | Tecnología |
-|---|---|
-| Emulador | L2jMobius — Interlude |
-| Lenguaje | Java 25 (Temurin) |
-| Base de Datos | MariaDB 10.6 (Docker) |
-| Build System | Apache Ant 1.10.17 |
-| Contenedores | Docker Compose |
+Toda la documentación técnica y planes de implementación se encuentran en la carpeta [/documentation](./documentation):
 
----
+- [Plan de Implementación](./documentation/implementation_plan.md)
+- [Guía de Niveles de Acceso (GM)](./documentation/access_levels_guide.md)
+- [Seguimiento de Tareas (Tasks)](./documentation/task.md)
 
-## 🚀 Guía de Inicio Rápido
+## 🛠️ Stack Técnico
 
-### Prerrequisitos
-- [JDK 25 (Eclipse Temurin)](https://adoptium.net/)
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-- [Apache Ant 1.10.17](https://ant.apache.org/)
-
-### 1. Clonar el Repositorio
-```bash
-git clone https://github.com/IamGustav-Student/L2Meraki-Interlude.git
-cd L2Meraki-Interlude
-```
-
-### 2. Levantar la Base de Datos
-```bash
-docker-compose up -d
-```
-Esto inicia MariaDB en `localhost:3306` y Adminer en `localhost:8080`.
-
-### 3. Compilar el Proyecto
-```bash
-# En Windows, usando el Ant incluido o instalado:
-ant jar
-```
-Esto genera `LoginServer.jar`, `GameServer.jar` y `DatabaseInstaller.jar` en `dist/libs/`.
-
-### 4. Desplegar los JARs
-Copiar los JARs compilados a `server_data/libs/`.
-
-### 5. Importar las Tablas SQL
-```bash
-# Desde Docker CLI o Adminer (localhost:8080):
-# Importar todos los .sql de server_data/db_installer/sql/
-```
-
-### 6. Iniciar los Servidores
-```powershell
-# Terminal 1: Login Server
-cd server_data/login
-java -server -Xms128m -Xmx256m -jar ../libs/LoginServer.jar
-
-# Terminal 2: Game Server
-cd server_data/game
-java -server -Xms512m -Xmx2g -jar ../libs/GameServer.jar
-```
+- **Core:** Java 25 / L2J Mobius
+- **Base de Datos:** MariaDB 10.6 (Dockerized)
+- **Build Tool:** Apache Ant 1.10.17
+- **Infraestructura:** Docker Compose
 
 ---
-
-## 📂 Estructura del Proyecto
-
-```
-L2Meraki-Interlude/
-├── java/                      # Código fuente Java (Login + Game + Commons)
-│   └── org/l2jmobius/
-│       ├── commons/           # Utilidades compartidas
-│       ├── gameserver/        # Motor del Game Server
-│       └── loginserver/       # Motor del Login Server
-├── server_data/
-│   ├── game/                  # Configuración del Game Server
-│   │   ├── config/            # Archivos .ini de configuración
-│   │   ├── data/              # NPCs, items, skills, spawns (XML)
-│   │   └── script/            # Scripts del servidor (quests, handlers)
-│   ├── login/                 # Configuración del Login Server
-│   │   └── config/            # Database.ini, Interface.ini
-│   ├── db_installer/          # Scripts SQL para la base de datos
-│   │   └── sql/               # 101 tablas requeridas
-│   └── libs/                  # Dependencias (HikariCP, MySQL Connector, SLF4J)
-├── docker-compose.yml         # Infraestructura: MariaDB + Adminer
-├── build.xml                  # Script de compilación Ant
-└── L2 Meraki.pdf              # Documento de diseño del servidor
-```
-
----
-
-## 🛡️ Roadmap
-
-- [x] **Fase 1**: Infraestructura (Docker, DB, Compilación)
-- [x] **Fase 2**: Configuración de Rates
-- [ ] **Fase 3**: Sistema de Buffs (20+4 slots, 1hr duración)
-- [ ] **Fase 4**: Enchant System (Safe +3, Max +16, 66% rate)
-- [ ] **Fase 5**: Sistema VIP & Skill "Spirit of Meraki"
-- [ ] **Fase 6**: Límites Anti-Zerg y Seguridad (HWID, Dual-box)
-- [ ] **Fase 7**: Eventos Automáticos (TvT, CtF, DM)
-- [ ] **Fase 8**: Configuración de Cliente
-- [ ] **Fase 9**: Landing Page & Dashboard Web
-- [ ] **Fase 10**: Integración Mercado Pago (Donaciones)
-
----
-
-## 📊 Base de Datos
-
-| Parámetro | Valor |
-|---|---|
-| Motor | MariaDB 10.6 |
-| Database | `l2meraki_db` |
-| Puerto | `3306` |
-| Adminer | `http://localhost:8080` |
-
----
-
-## 📄 Licencia
-
-Este proyecto es un servidor privado de Lineage 2 con fines educativos y de entretenimiento.
-El código del emulador está basado en [L2jMobius](https://www.l2jmobius.org/) bajo sus respectivos términos.
-
----
-
-<p align="center">
-  <em>Hecho con μεράκι (Meraki) — con alma y creatividad.</em>
-</p>
+Developed by **Antigravity AI** for **IamGustav-Student**.
