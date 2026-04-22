@@ -1,0 +1,46 @@
+# ============================================
+# L2 Meraki - .gitignore
+# ============================================
+
+# --- Java Compiled Output ---
+/bin/
+*.class
+
+# --- Build Artifacts (re-generables con `ant jar`) ---
+/dist/libs/GameServer.jar
+/dist/libs/LoginServer.jar
+/dist/libs/DatabaseInstaller.jar
+/server_data/libs/GameServer.jar
+/server_data/libs/LoginServer.jar
+
+# --- Tools (descargables, no versionables) ---
+/tools/
+
+# --- IDE / Editor ---
+/.settings/
+/.classpath
+/.project
+*.iml
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- Docker Volumes & Runtime ---
+docker-data/
+
+# --- Logs ---
+*.log
+/server_data/game/log/
+/server_data/login/log/
+
+# --- OS Files ---
+Thumbs.db
+Desktop.ini
+.DS_Store
+ehthumbs.db
+
+# --- Sensitive / Runtime Config ---
+# (hexid se genera por server, no compartir)
+/server_data/game/config/hexid.txt

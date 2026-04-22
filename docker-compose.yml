@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  l2db:
+    image: mariadb:10.6
+    container_name: l2meraki_db
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: root_password
+      MARIADB_DATABASE: l2meraki_db
+      MARIADB_USER: meraki_admin
+      MARIADB_PASSWORD: meraki_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - l2meraki_data:/var/lib/mysql
+
+  adminer:
+    image: adminer
+    container_name: l2meraki_adminer
+    restart: always
+    ports:
+      - "8080:8080"
+
+volumes:
+  l2meraki_data:
