@@ -60,6 +60,8 @@ def restore_all_dats():
     process_file('etcitemgrp_final_full.txt', 'etcitemgrp.ddf', 'etcitemgrp.dat', 32)
     process_file('armorgrp_source.txt', 'armorgrp.ddf', 'armorgrp.dat', 332)
     process_file('weapongrp_source.txt', 'weapongrp.ddf', 'weapongrp.dat', 92)
+    process_file('skillname_master.txt', 'skillname-e.ddf', 'skillname-e.dat', 6)
+    process_file('skillgrp_master.txt', 'skillgrp.ddf', 'skillgrp.dat', 17)
 
 def sanitize_line(line, expected_fields):
     parts = line.strip('\n\r').split('\t')
