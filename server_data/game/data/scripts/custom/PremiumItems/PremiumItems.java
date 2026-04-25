@@ -7,6 +7,7 @@ import org.l2jmobius.gameserver.handler.ItemHandler;
 import org.l2jmobius.gameserver.managers.PremiumManager;
 import org.l2jmobius.gameserver.model.actor.Playable;
 import org.l2jmobius.gameserver.model.actor.Player;
+import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
 import org.l2jmobius.gameserver.model.item.instance.Item;
 import org.l2jmobius.gameserver.model.script.Script;
 
@@ -22,14 +23,19 @@ public class PremiumItems extends Script implements IItemHandler
 	}
 	
 	@Override
-	public boolean useItem(Playable playable, Item item, boolean forceUse)
+	public boolean onItemUse(Playable playable, Item item, boolean forceUse)
 	{
 		if (!playable.isPlayer())
 		{
 			return false;
 		}
 		
-		final Player player = playable.getActingPlayer();
+		final Player player = playable.asPlayer();
+		if (player == null)
+		{
+			return false;
+		}
+		
 		int days = 0;
 		switch (item.getId())
 		{
@@ -47,11 +53,10 @@ public class PremiumItems extends Script implements IItemHandler
 		if (days > 0)
 		{
 			PremiumManager.getInstance().addPremiumTime(player.getAccountName(), days, TimeUnit.DAYS);
-			player.destroyItem("PremiumActivation", item, player, true);
+			player.destroyItem(ItemProcessType.DESTROY, item, player, true);
 			player.sendMessage("¡Felicidades! Tu cuenta ahora tiene estado Premium por " + days + " días.");
 			player.sendMessage("Usa el comando .premium para ver los detalles de tu suscripción.");
 			
-			// Optional: Refresh player stats if needed
 			player.broadcastUserInfo();
 			return true;
 		}
