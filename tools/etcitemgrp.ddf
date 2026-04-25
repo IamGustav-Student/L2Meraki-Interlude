@@ -1,10 +1,8 @@
 FS = "\t";
-HEADER = 1;
+HEADER = 0;
 RECCNT = OFF;
 MTXCNT_OUT = 1;
 MATCNT_OUT = 1;
-MTXCNT_IN = 1;
-MATCNT_IN = 1;
 ORD_IGNORE = 0;
 
 {
@@ -27,7 +25,10 @@ ORD_IGNORE = 0;
 	UINT material;
 	UINT crystallizable;
 	UINT type1;
-	MTX mesh_tex_pair;
+	UINT mesh_cnt;
+	UNICODE mesh;
+	UINT tex_cnt;
+	UNICODE tex;
 	UNICODE item_sound;
 	UNICODE equip_sound;
 	UINT stackable;

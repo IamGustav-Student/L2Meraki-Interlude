@@ -1,7 +1,7 @@
 //submitted by czardadius
 
 FS = "\t"; 
-HEADER = 1; 
+HEADER = 0; 
 RECCNT = OFF; 
 MTXCNT_OUT = 1; 
 MATCNT_OUT = 1; 
@@ -17,7 +17,8 @@ ORD_IGNORE = 0;
    ASCF set_bonus_desc; 
    ASCF set_extra_id; 
    ASCF set_extra_desc; 
-   CHEX unk[2];
+   CHEX unk0;
+   CHEX unk1;
    UINT special_enchant_amount; 
    ASCF special_enchant_desc; 
 }

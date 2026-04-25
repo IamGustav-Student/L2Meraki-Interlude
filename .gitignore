@@ -8,6 +8,8 @@
 /bin/
 /dist/
 /build/
+MerakiLauncher/bin/
+MerakiLauncher/obj/
 
 # Logs
 *.log
@@ -26,3 +28,11 @@ Thumbs.db
 
 # L2 Specific
 /server_data/game/config/hexid.txt
+/system_master/system/*.crypt.dat
+
+# Tools Temp
+/tools/*_test.txt
+/tools/*_enc.dat
+/tools/*_new.dat
+/tools/*_v2.txt
+/tools/itemname-e.dat
