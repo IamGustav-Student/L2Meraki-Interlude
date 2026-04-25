@@ -36,3 +36,11 @@ Thumbs.db
 /tools/*_new.dat
 /tools/*_v2.txt
 /tools/itemname-e.dat
+
+/tools/*.dec
+/tools/*_master*
+/tools/*_test*
+/tools/temp_*
+/tools/*.dat.dec
+/tools/*.compiled.dat
+/tools/*.new.dat
