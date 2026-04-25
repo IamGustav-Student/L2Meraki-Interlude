@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
 	<npcs>
+		<npc>-1</npc>
 		<npc>31078</npc> <!-- Priest of Dawn -->
 		<npc>31079</npc> <!-- Priest of Dawn -->
 		<npc>31080</npc> <!-- Priest of Dawn -->

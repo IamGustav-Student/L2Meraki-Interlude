@@ -65,6 +65,9 @@
     <production id="8175" count="1"/>
   </item>
 
+	<npcs>
+		<npc>-1</npc>
+	</npcs>
 </list>
 
 

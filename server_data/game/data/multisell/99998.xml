@@ -188,4 +188,7 @@
 <production id="1539" count="100"/>
 </item>
 
+	<npcs>
+		<npc>-1</npc>
+	</npcs>
 </list>

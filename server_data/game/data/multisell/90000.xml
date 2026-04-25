@@ -119,4 +119,7 @@
   </item>
 
 
+	<npcs>
+		<npc>-1</npc>
+	</npcs>
 </list>

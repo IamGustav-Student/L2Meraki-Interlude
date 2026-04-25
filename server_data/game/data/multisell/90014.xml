@@ -249,4 +249,7 @@
     <production id="4902" count="1"/>
   </item>
 
+	<npcs>
+		<npc>-1</npc>
+	</npcs>
 </list>

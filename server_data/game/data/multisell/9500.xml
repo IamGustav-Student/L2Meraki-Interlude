@@ -15,4 +15,7 @@
 		<ingredient id="4356" count="30"/>
 		<production id="9502" count="1"/>
 	</item>
+	<npcs>
+		<npc>-1</npc>
+	</npcs>
 </list>
