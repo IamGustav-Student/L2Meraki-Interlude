@@ -6877,6 +6877,6 @@
 2	9205	0	0	2	5	0	dropitems.drop_sack_m00			dropitemstex.drop_sack_t00			icon.etc_old_key_i02					-1	10	53	0	0	1		1				2	0	0
 2	9206	0	3	1	6	0	dropitems.drop_lesser_potion_m00			dropitemstex.drop_lesser_potion_clear_t00			icon.etc_reagent_white_i00					-1	5	53	0	0	1		1		ItemSound.itemdrop_potion		2	3	0
 2	9207	0	3	2	6	0	dropitems.drop_potion_m00			dropitemstex.drop_potion_gold_t00			icon.etc_potion_gold_i00					-1	5	53	0	0	1		1		ItemSound.itemdrop_potion		2	3	0
-2	9500	0	3	2	5	0	dropitems.drop_sack_m00			dropitemstex.drop_sack_t00			icon.etc_talisman_i01					-1	0	17	0	0	1		1		ItemSound.itemdrop_sack		0	0	0
-2	9501	0	3	2	5	0	dropitems.drop_sack_m00			dropitemstex.drop_sack_t00			icon.etc_talisman_i02					-1	0	17	0	0	1		1		ItemSound.itemdrop_sack		0	0	0
-2	9502	0	3	2	5	0	dropitems.drop_sack_m00			dropitemstex.drop_sack_t00			icon.etc_talisman_i03					-1	0	17	0	0	1		1		ItemSound.itemdrop_sack		0	0	0
+2	9500	0	3	2	5	0	dropitems.drop_sack_m00			dropitemstex.drop_sack_t00			icon.etc_magic_coin_02_i00					-1	0	17	0	0	1		1		ItemSound.itemdrop_sack		0	0	0
+2	9501	0	3	2	5	0	dropitems.drop_sack_m00			dropitemstex.drop_sack_t00			icon.etc_magic_coin_01_i00					-1	0	17	0	0	1		1		ItemSound.itemdrop_sack		0	0	0
+2	9502	0	3	2	5	0	dropitems.drop_sack_m00			dropitemstex.drop_sack_t00			icon.etc_royal_membership_i00					-1	0	17	0	0	1		1		ItemSound.itemdrop_sack		0	0	0
