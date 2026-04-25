@@ -46,10 +46,16 @@ namespace MerakiLauncher
         {
             try
             {
+                Log("Starting update check...");
                 StatusLabel.Text = "Connecting to server...";
                 using var client = new HttpClient();
+                
+                // Add cache-busting timestamp to avoid GitHub Raw cache
                 string json = await client.GetStringAsync(BASE_URL + "patch.json?t=" + DateTime.Now.Ticks);
+                Log("Manifest downloaded.");
+                
                 var remoteFiles = JsonConvert.DeserializeObject<List<PatchFile>>(json);
+                if (remoteFiles == null) throw new Exception("Failed to parse manifest.");
 
                 StatusLabel.Text = "Verifying files...";
                 _filesToUpdate.Clear();
@@ -59,6 +65,7 @@ namespace MerakiLauncher
                     if (NeedsUpdate(file))
                     {
                         _filesToUpdate.Add(file);
+                        Log($"Update needed: {file.Path}");
                     }
                 }
 
@@ -67,6 +74,10 @@ namespace MerakiLauncher
                     StatusLabel.Text = $"Updating ({_filesToUpdate.Count} files)...";
                     await DownloadFiles();
                 }
+                else
+                {
+                    Log("All files are up to date.");
+                }
 
                 StatusLabel.Text = "Meraki is ready!";
                 UpdateProgress.Value = 100;
@@ -74,10 +85,18 @@ namespace MerakiLauncher
             }
             catch (Exception ex)
             {
+                Log("ERROR: " + ex.ToString());
                 MessageBox.Show("Error checking updates: " + ex.Message);
                 StatusLabel.Text = "Offline Mode - Ready";
                 StartBtn.IsEnabled = true;
             }
+        }
+
+        private void Log(string message)
+        {
+            try {
+                File.AppendAllText("launcher_log.txt", $"[{DateTime.Now:HH:mm:ss}] {message}\n");
+            } catch { }
         }
 
         private bool NeedsUpdate(PatchFile file)
@@ -96,6 +115,7 @@ namespace MerakiLauncher
             int count = 0;
             foreach (var file in _filesToUpdate)
             {
+                Log($"Downloading: {file.Path}");
                 StatusLabel.Text = $"Downloading {Path.GetFileName(file.Path)}...";
                 Directory.CreateDirectory(Path.GetDirectoryName(file.Path) ?? ".");
                 
@@ -105,6 +125,7 @@ namespace MerakiLauncher
                 count++;
                 UpdateProgress.Value = (double)count / _filesToUpdate.Count * 100;
             }
+            Log("All downloads completed.");
         }
 
         private void StartBtn_Click(object sender, RoutedEventArgs e)
