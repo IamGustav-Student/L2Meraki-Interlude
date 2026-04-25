@@ -4942,7 +4942,6 @@
 2	6670	0	3	5	6	0	dropitems.drop_jewel_box_m00			dropitemstex.drop_jewel_box_t00			icon.etc_old_key_i00					0	10	8	0	0	1		1		ItemSound.itemdrop_jewelbox		2	0	0
 2	6671	0	3	5	6	0	dropitems.drop_jewel_box_m00			dropitemstex.drop_jewel_box_t00			icon.etc_old_key_i00					0	10	8	0	0	1		1		ItemSound.itemdrop_jewelbox		2	0	0
 2	6672	0	3	5	6	0	dropitems.drop_jewel_box_m00			dropitemstex.drop_jewel_box_t00			icon.etc_old_key_i00					0	10	8	0	1769984	1		1		ItemSound.itemdrop_jewelbox		2	0	0
-2	6673	0	5	4	1	0	dropitems.drop_coin_of_fair_m00			dropitemsTex.drop_coin_of_fair_t00			icon.etc_coin_of_fair_i00					0	0	8	0	0	1		1				2	0	0
 2	6688	0	3	4	5	0	dropitems.drop_sword_body_m00			dropitemstex.drop_sword_body_t00			icon.etc_sword_body_i00					0	60	53	0	0	1		1		ItemSound.itemdrop_swordbody		2	6	0
 2	6689	0	3	5	6	0	dropitems.drop_jewel_box_m00			dropitemstex.drop_jewel_box_t00			icon.etc_squares_gray_i00					0	60	53	0	0	1		1		ItemSound.itemdrop_jewelbox		2	6	0
 2	6690	0	3	3	4	0	dropitems.drop_piece_of_metal_m00			dropitemstex.drop_piece_of_metal_t00			icon.etc_bark_blue_i00					0	60	53	0	0	1		1		ItemSound.itemdrop_lump		2	6	0
@@ -6879,6 +6878,7 @@
 2	9205	0	0	2	5	0	dropitems.drop_sack_m00			dropitemstex.drop_sack_t00			icon.etc_old_key_i02					-1	10	53	0	0	1		1				2	0	0
 2	9206	0	3	1	6	0	dropitems.drop_lesser_potion_m00			dropitemstex.drop_lesser_potion_clear_t00			icon.etc_reagent_white_i00					-1	5	53	0	0	1		1		ItemSound.itemdrop_potion		2	3	0
 2	9207	0	3	2	6	0	dropitems.drop_potion_m00			dropitemstex.drop_potion_gold_t00			icon.etc_potion_gold_i00					-1	5	53	0	0	1		1		ItemSound.itemdrop_potion		2	3	0
-2	9500	0	3	2	5	0	dropitems.drop_sack_m00			dropitemstex.drop_sack_t00			icon.etc_magic_coin_02_i00					-1	0	17	0	0	1		1		ItemSound.itemdrop_sack		0	0	0
-2	9501	0	3	2	5	0	dropitems.drop_sack_m00			dropitemstex.drop_sack_t00			icon.etc_magic_coin_01_i00					-1	0	17	0	0	1		1		ItemSound.itemdrop_sack		0	0	0
-2	9502	0	3	2	5	0	dropitems.drop_sack_m00			dropitemstex.drop_sack_t00			icon.etc_royal_membership_i00					-1	0	17	0	0	1		1		ItemSound.itemdrop_sack		0	0	0
+2	9500	0	3	2	5	0	dropitems.drop_sack_m00			dropitemstex.drop_sack_t00			icon.etc_scroll_of_return_i01					-1	0	17	0	0	1		1		ItemSound.itemdrop_sack		0	0	0
+2	9501	0	3	2	5	0	dropitems.drop_sack_m00			dropitemstex.drop_sack_t00			icon.etc_scroll_of_return_i01					-1	0	17	0	0	1		1		ItemSound.itemdrop_sack		0	0	0
+2	9502	0	3	2	5	0	dropitems.drop_sack_m00			dropitemstex.drop_sack_t00			icon.etc_scroll_of_return_i01					-1	0	17	0	0	1		1		ItemSound.itemdrop_sack		0	0	0
+2	6673	0	5	4	1	0	dropitems.drop_coin_of_fair_m00			dropitemsTex.drop_coin_of_fair_t00			icon.etc_coin_of_fair_i00					0	0	8	0	0	1		1				2	0	0

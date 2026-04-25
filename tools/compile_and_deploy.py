@@ -34,11 +34,12 @@ def restore_all_dats():
     with open(os.path.join(TOOLS_DIR, 'itemname_master.txt'), 'r', encoding='utf-8') as f:
         lines = f.readlines()[1:] # Skip header
     
-    ids_to_remove = {'95000', '95001', '95002', '9500', '9501', '9502'}
+    ids_to_remove = {'95000', '95001', '95002', '9500', '9501', '9502', '6673'}
     lines = [l for l in lines if l.split('\t')[0].strip() not in ids_to_remove]
-    lines.append('9500\tVIP Spirit - 7 Days\t\ta,Enhanced rates and stats for 7 days.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
-    lines.append('9501\tVIP Spirit - 15 Days\t\ta,Enhanced rates and stats for 15 days.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
-    lines.append('9502\tVIP Spirit - 30 Days\t\ta,Enhanced rates and stats for 30 days.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
+    lines.append('6673\tMeraki Coin\t\ta,The official Meraki VIP currency. Tradeable and valuable.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
+    lines.append('9500\tVIP Meraki - 1 Day\t\ta,Enhanced rates and stats for 1 day.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
+    lines.append('9501\tVIP Meraki - 15 Days\t\ta,Enhanced rates and stats for 15 days.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
+    lines.append('9502\tVIP Meraki - 30 Days\t\ta,Enhanced rates and stats for 30 days.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
     with open(os.path.join(TOOLS_DIR, 'itemname_final_full.txt'), 'w', encoding='utf-8') as f:
         f.writelines(lines)
 
@@ -46,12 +47,16 @@ def restore_all_dats():
     with open(os.path.join(TOOLS_DIR, 'etcitemgrp_master.txt'), 'r', encoding='utf-8') as f:
         lines = f.readlines()[1:] # Skip header
     lines = [l for l in lines if l.split('\t')[1].strip() not in ids_to_remove]
-    line_9500 = '2\t9500\t0\t3\t2\t5\t0\tdropitems.drop_sack_m00\t\t\tdropitemstex.drop_sack_t00\t\t\ticon.etc_magic_coin_02_i00\t\t\t\t\t-1\t0\t17\t0\t0\t1\t\t1\t\tItemSound.itemdrop_sack\t\t0\t0\t0\n'
-    line_9501 = '2\t9501\t0\t3\t2\t5\t0\tdropitems.drop_sack_m00\t\t\tdropitemstex.drop_sack_t00\t\t\ticon.etc_magic_coin_01_i00\t\t\t\t\t-1\t0\t17\t0\t0\t1\t\t1\t\tItemSound.itemdrop_sack\t\t0\t0\t0\n'
-    line_9502 = '2\t9502\t0\t3\t2\t5\t0\tdropitems.drop_sack_m00\t\t\tdropitemstex.drop_sack_t00\t\t\ticon.etc_royal_membership_i00\t\t\t\t\t-1\t0\t17\t0\t0\t1\t\t1\t\tItemSound.itemdrop_sack\t\t0\t0\t0\n'
+    # Using icon.etc_scroll_of_return_i01 (Yellow Ticket) for VIP items
+    line_9500 = '2\t9500\t0\t3\t2\t5\t0\tdropitems.drop_sack_m00\t\t\tdropitemstex.drop_sack_t00\t\t\ticon.etc_scroll_of_return_i01\t\t\t\t\t-1\t0\t17\t0\t0\t1\t\t1\t\tItemSound.itemdrop_sack\t\t0\t0\t0\n'
+    line_9501 = '2\t9501\t0\t3\t2\t5\t0\tdropitems.drop_sack_m00\t\t\tdropitemstex.drop_sack_t00\t\t\ticon.etc_scroll_of_return_i01\t\t\t\t\t-1\t0\t17\t0\t0\t1\t\t1\t\tItemSound.itemdrop_sack\t\t0\t0\t0\n'
+    line_9502 = '2\t9502\t0\t3\t2\t5\t0\tdropitems.drop_sack_m00\t\t\tdropitemstex.drop_sack_t00\t\t\ticon.etc_scroll_of_return_i01\t\t\t\t\t-1\t0\t17\t0\t0\t1\t\t1\t\tItemSound.itemdrop_sack\t\t0\t0\t0\n'
+    # Meraki Coin (6673) with its original icon
+    line_6673 = '2\t6673\t0\t5\t4\t1\t0\tdropitems.drop_coin_of_fair_m00\t\t\tdropitemsTex.drop_coin_of_fair_t00\t\t\ticon.etc_coin_of_fair_i00\t\t\t\t\t0\t0\t8\t0\t0\t1\t\t1\t\t\t\t2\t0\t0\n'
     lines.append(line_9500)
     lines.append(line_9501)
     lines.append(line_9502)
+    lines.append(line_6673)
     with open(os.path.join(TOOLS_DIR, 'etcitemgrp_final_full.txt'), 'w', encoding='utf-8') as f:
         f.writelines(lines)
 

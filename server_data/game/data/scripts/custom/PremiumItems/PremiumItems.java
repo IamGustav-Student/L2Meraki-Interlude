@@ -39,8 +39,8 @@ public class PremiumItems extends Script implements IItemHandler
 		int days = 0;
 		switch (item.getId())
 		{
-			case 9500: // VIP Meraki - 7 Days
-				days = 7;
+			case 9500: // VIP Meraki - 1 Day
+				days = 1;
 				break;
 			case 9501: // VIP Meraki - 15 Days
 				days = 15;

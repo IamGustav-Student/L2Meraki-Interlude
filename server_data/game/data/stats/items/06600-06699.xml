@@ -1362,15 +1362,15 @@
 			<skill id="2229" level="8" /> <!-- Treasure Chest Key - 8 -->
 		</skills>
 	</item>
-	<item id="6673" type="EtcItem" name="Festival Adena">
-		<!-- Currency used in the "2005 Lineage II Live" event. -->
+	<item id="6673" type="EtcItem" name="Meraki Coin">
+		<!-- The official Meraki VIP currency. Tradeable and valuable. -->
 		<set name="icon" val="icon.etc_coin_of_fair_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
+		<set name="is_depositable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="6674" type="Armor" name="Sealed Imperial Crusader Breastplate">

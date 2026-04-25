@@ -1,18 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list>
-	<!-- VIP Spirit - 7 Days -->
+	<!-- VIP Meraki - 1 Day -->
 	<item id="1">
-		<ingredient id="4356" count="10"/>
+		<ingredient id="6673" count="100"/>
 		<production id="9500" count="1"/>
 	</item>
-	<!-- VIP Spirit - 15 Days -->
+	<!-- VIP Meraki - 15 Days -->
 	<item id="2">
-		<ingredient id="4356" count="18"/>
+		<ingredient id="6673" count="650"/>
 		<production id="9501" count="1"/>
 	</item>
-	<!-- VIP Spirit - 30 Days -->
+	<!-- VIP Meraki - 30 Days -->
 	<item id="3">
-		<ingredient id="4356" count="30"/>
+		<ingredient id="6673" count="1000"/>
 		<production id="9502" count="1"/>
 	</item>
 	<npcs>
