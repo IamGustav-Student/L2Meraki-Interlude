@@ -48,7 +48,7 @@ namespace MerakiLauncher
             {
                 StatusLabel.Text = "Connecting to server...";
                 using var client = new HttpClient();
-                string json = await client.GetStringAsync(BASE_URL + "patch.json");
+                string json = await client.GetStringAsync(BASE_URL + "patch.json?t=" + DateTime.Now.Ticks);
                 var remoteFiles = JsonConvert.DeserializeObject<List<PatchFile>>(json);
 
                 StatusLabel.Text = "Verifying files...";
