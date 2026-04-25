@@ -15,5 +15,6 @@
 		<npc id="20545" x="-72971" y="255123" z="-3256" heading="22286" respawnDelay="25" /> <!-- Young Keltir -->
 		<npc id="20545" x="-71081" y="254981" z="-3232" heading="48948" respawnDelay="25" /> <!-- Young Keltir -->
 		<npc id="27003" x="-96984" y="247644" z="-3640" heading="20794" respawnDelay="180" /> <!-- Spirit Of Mirrors -->
+		<npc id="50008" x="-71435" y="258284" z="-3135" heading="39652" respawnDelay="60" /> <!-- Thiago - Scheme Buffer -->
 	</spawn>
 </list>

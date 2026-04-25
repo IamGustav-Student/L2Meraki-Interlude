@@ -681,8 +681,8 @@
 			<skill id="2135" level="1" /> <!-- Hair Style Change Potion -->
 		</skills>
 	</item>
-	<item id="5249" type="EtcItem" name="Meraki VIP">
-		<set name="icon" val="icon.etc_l2_i00" />
+	<item id="5249" type="EtcItem" name="Meraki VIP - 30 Days">
+		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="etcitem_type" val="RUNE" />
 		<set name="material" val="CLOTH" />
 		<set name="is_tradable" val="false" />
@@ -694,7 +694,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="duration" val="43200" />
 		<skills>
-			<skill id="9000" level="1" />
+			<skill id="9000" level="3" />
 		</skills>
 	</item>
 	<item id="5250" type="EtcItem" name="Greater Compressed Package of Soulshots: No-grade">

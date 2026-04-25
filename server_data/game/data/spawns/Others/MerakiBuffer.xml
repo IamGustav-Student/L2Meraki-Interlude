@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="MerakiBuffers_Global">
+		<npc id="50008" x="146787" y="25857" z="-2013" heading="0" respawnDelay="5" /> <!-- Near GK 30848 -->
+		<npc id="50008" x="15681" y="142935" z="-2704" heading="16000" respawnDelay="5" /> <!-- Near GK 30059 -->
+		<npc id="50008" x="17346" y="114226" z="-3439" heading="32768" respawnDelay="5" /> <!-- Near GK 30483 -->
+		<npc id="50008" x="115122" y="-178126" z="-880" heading="0" respawnDelay="5" /> <!-- Near GK 30540 -->
+		<npc id="50008" x="46976" y="51561" z="-2976" heading="43000" respawnDelay="5" /> <!-- Near GK 30146 -->
+		<npc id="50008" x="83446" y="147954" z="-3404" heading="16384" respawnDelay="5" /> <!-- Near GK 30080 -->
+		<npc id="50008" x="105938" y="109858" z="-3216" heading="45056" respawnDelay="5" /> <!-- Near GK 30836 -->
+		<npc id="50008" x="-80702" y="149826" z="-3044" heading="20480" respawnDelay="5" /> <!-- Near GK 30320 -->
+		<npc id="50008" x="-12686" y="122866" z="-3114" heading="49152" respawnDelay="5" /> <!-- Near GK 30256 -->
+		<npc id="50008" x="148016" y="-55178" z="-2728" heading="48000" respawnDelay="5" /> <!-- Near GK 31275 -->
+		<npc id="50008" x="117179" y="76967" z="-2689" heading="34000" respawnDelay="5" /> <!-- Near GK 30233 -->
+		<npc id="50008" x="111436" y="219463" z="-3536" heading="-15780" respawnDelay="5" /> <!-- Near GK 30899 -->
+		<npc id="50008" x="-45214" y="-112462" z="-240" heading="0" respawnDelay="5" /> <!-- Near GK 30576 -->
+		<npc id="50008" x="84864" y="15936" z="-4291" heading="5200" respawnDelay="5" /> <!-- Near GK 30162 -->
+		<npc id="50008" x="85386" y="16244" z="-3664" heading="49152" respawnDelay="5" /> <!-- Near GK 30727 -->
+		<npc id="50008" x="83042" y="53221" z="-1492" heading="31000" respawnDelay="5" /> <!-- Near GK 30177 -->
+		<npc id="50008" x="43874" y="-47614" z="-800" heading="50000" respawnDelay="5" /> <!-- Near GK 31320 -->
+		<npc id="50008" x="38434" y="-48014" z="-1151" heading="49000" respawnDelay="5" /> <!-- Near GK 31699 -->
+		<npc id="50008" x="38258" y="-47998" z="899" heading="0" respawnDelay="5" /> <!-- Near GK 31698 -->
+		<npc id="50008" x="87098" y="-143398" z="-1293" heading="15584" respawnDelay="5" /> <!-- Near GK 31964 -->
+		<npc id="50008" x="-84058" y="244654" z="-3728" heading="40960" respawnDelay="5" /> <!-- Near GK 30006 -->
+	</spawn>
+</list>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/items.xsd">
+	<item id="6580" type="EtcItem" name="Meraki VIP - 1 Day">
+		<set name="icon" val="icon.etc_royal_membership_i00" />
+		<set name="etcitem_type" val="RUNE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="0" />
+		<set name="is_stackable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="1440" />
+		<skills>
+			<skill id="9000" level="1" />
+		</skills>
+	</item>
+	
+	<item id="6581" type="EtcItem" name="Meraki VIP - 15 Days">
+		<set name="icon" val="icon.etc_royal_membership_i00" />
+		<set name="etcitem_type" val="RUNE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="0" />
+		<set name="is_stackable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="duration" val="21600" />
+		<skills>
+			<skill id="9000" level="2" />
+		</skills>
+	</item>
+</list>

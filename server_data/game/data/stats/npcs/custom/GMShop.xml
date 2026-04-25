@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/npcs.xsd">
+	<npc id="353535" displayId="31756" name="Meraki Store" usingServerSideName="true" title="GM Shop" usingServerSideTitle="true" type="Merchant">
+		<collision>
+			<radius normal="22" />
+			<height normal="33" />
+		</collision>
+	</npc>
+</list>

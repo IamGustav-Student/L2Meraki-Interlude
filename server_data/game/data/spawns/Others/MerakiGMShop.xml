@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="MerakiGMShop_Global">
+		<npc id="353535" x="146687" y="25757" z="-2013" heading="0" respawnDelay="5" /> <!-- Meraki GMShop near GK 30848 -->
+		<npc id="353535" x="15581" y="142835" z="-2704" heading="16000" respawnDelay="5" /> <!-- Meraki GMShop near GK 30059 -->
+		<npc id="353535" x="17246" y="114126" z="-3439" heading="32768" respawnDelay="5" /> <!-- Meraki GMShop near GK 30483 -->
+		<npc id="353535" x="115022" y="-178226" z="-880" heading="0" respawnDelay="5" /> <!-- Meraki GMShop near GK 30540 -->
+		<npc id="353535" x="46876" y="51461" z="-2976" heading="43000" respawnDelay="5" /> <!-- Meraki GMShop near GK 30146 -->
+		<npc id="353535" x="105838" y="109758" z="-3216" heading="45056" respawnDelay="5" /> <!-- Meraki GMShop near GK 30836 -->
+		<npc id="353535" x="-80802" y="149726" z="-3044" heading="20480" respawnDelay="5" /> <!-- Meraki GMShop near GK 30320 -->
+		<npc id="353535" x="-12786" y="122766" z="-3114" heading="49152" respawnDelay="5" /> <!-- Meraki GMShop near GK 30256 -->
+		<npc id="353535" x="147916" y="-55278" z="-2728" heading="48000" respawnDelay="5" /> <!-- Meraki GMShop near GK 31275 -->
+		<npc id="353535" x="117079" y="76867" z="-2689" heading="34000" respawnDelay="5" /> <!-- Meraki GMShop near GK 30233 -->
+		<npc id="353535" x="111336" y="219363" z="-3536" heading="-15780" respawnDelay="5" /> <!-- Meraki GMShop near GK 30899 -->
+		<npc id="353535" x="-45314" y="-112562" z="-240" heading="0" respawnDelay="5" /> <!-- Meraki GMShop near GK 30576 -->
+		<npc id="353535" x="84764" y="15836" z="-4291" heading="5200" respawnDelay="5" /> <!-- Meraki GMShop near GK 30162 -->
+		<npc id="353535" x="85286" y="16144" z="-3664" heading="49152" respawnDelay="5" /> <!-- Meraki GMShop near GK 30727 -->
+		<npc id="353535" x="82942" y="53121" z="-1492" heading="31000" respawnDelay="5" /> <!-- Meraki GMShop near GK 30177 -->
+		<npc id="353535" x="43774" y="-47714" z="-800" heading="50000" respawnDelay="5" /> <!-- Meraki GMShop near GK 31320 -->
+		<npc id="353535" x="38334" y="-48114" z="-1151" heading="49000" respawnDelay="5" /> <!-- Meraki GMShop near GK 31699 -->
+		<npc id="353535" x="38158" y="-48098" z="899" heading="0" respawnDelay="5" /> <!-- Meraki GMShop near GK 31698 -->
+		<npc id="353535" x="86998" y="-143498" z="-1293" heading="15584" respawnDelay="5" /> <!-- Meraki GMShop near GK 31964 -->
+		<npc id="353535" x="-84158" y="244554" z="-3728" heading="40960" respawnDelay="5" /> <!-- Meraki GMShop near GK 30006 -->
+	</spawn>
+</list>

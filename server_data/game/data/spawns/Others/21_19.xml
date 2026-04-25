@@ -11,5 +11,6 @@
 		<npc id="27017" x="34994" y="35928" z="-3632" heading="0" respawnDelay="30" /> <!-- Plague Zombie -->
 		<npc id="27017" x="34994" y="36156" z="-3672" heading="0" respawnDelay="30" /> <!-- Plague Zombie -->
 		<npc id="27060" x="36910" y="61471" z="-3616" heading="0" respawnDelay="180" /> <!-- Kracha -->
+		<npc id="50008" x="46087" y="41255" z="-3534" heading="53120" respawnDelay="60" /> <!-- Meraki Buffer - Scheme Buffer -->
 	</spawn>
 </list>

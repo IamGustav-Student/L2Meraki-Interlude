@@ -1,0 +1,677 @@
+[
+    {
+        "Path": "system/actionname-e.dat",
+        "Md5": "c164efdf08caeaa0c97ccdd1446acc16",
+        "Size": 6832
+    },
+    {
+        "Path": "system/ALAudio.dll",
+        "Md5": "9bbf6199558ae72f3cb8c54d4a09009f",
+        "Size": 352276
+    },
+    {
+        "Path": "system/ALAudio.int",
+        "Md5": "a32903b3752ac087efe6cbce9b65de20",
+        "Size": 2658
+    },
+    {
+        "Path": "system/armorgrp.dat",
+        "Md5": "6b9d82f371acf0f543ea21f581498799",
+        "Size": 101552
+    },
+    {
+        "Path": "system/asiahm-medium.ttf",
+        "Md5": "5f3db56df762ae9ad07ee5a60c878bf3",
+        "Size": 601048
+    },
+    {
+        "Path": "system/bighead.int",
+        "Md5": "9dc0ae2b00dbe5136ed75ad8794ee91c",
+        "Size": 350
+    },
+    {
+        "Path": "system/castlename-e.dat",
+        "Md5": "88e35c61b51e1fe73fc16ba6cbca9fc5",
+        "Size": 1072
+    },
+    {
+        "Path": "system/chargrp.dat",
+        "Md5": "fc117017b47bce36cf0df87937f959cc",
+        "Size": 2480
+    },
+    {
+        "Path": "system/chatfilter.ini",
+        "Md5": "363e6f64aabb21a81c61e9c89737b84f",
+        "Size": 759
+    },
+    {
+        "Path": "system/classinfo-e.dat",
+        "Md5": "a7d2afe9069f58d8c3042cbc940e286a",
+        "Size": 2224
+    },
+    {
+        "Path": "system/clientdata.dat",
+        "Md5": "a99f1b061cb2451446b0a25a19d1a9f3",
+        "Size": 432
+    },
+    {
+        "Path": "system/cloak.int",
+        "Md5": "455563ae33436c5d13d10703b1441d53",
+        "Size": 454
+    },
+    {
+        "Path": "system/commandname-e.dat",
+        "Md5": "cf94dc28099b8a0844b4062201aedb12",
+        "Size": 1328
+    },
+    {
+        "Path": "system/Core.dll",
+        "Md5": "b519540b5f7f5b9153263ecb492e88cc",
+        "Size": 1372180
+    },
+    {
+        "Path": "system/core.int",
+        "Md5": "9d3496dc43e5c34460729df427b9f585",
+        "Size": 3423
+    },
+    {
+        "Path": "system/Core.u",
+        "Md5": "16fc24769d23435b7f25c7b93b7396d3",
+        "Size": 65662
+    },
+    {
+        "Path": "system/creditfont.gly",
+        "Md5": "7715fd8ad82b14f7b8873eac7825cf6e",
+        "Size": 181800
+    },
+    {
+        "Path": "system/creditgrp-e.dat",
+        "Md5": "480d21f52521e8400df5426dd831689f",
+        "Size": 816
+    },
+    {
+        "Path": "system/D3DDrv.dll",
+        "Md5": "8ab869364379486f220259fa1c6c7d90",
+        "Size": 1277972
+    },
+    {
+        "Path": "system/defopenal32.dll",
+        "Md5": "ecab7cb66244bfb9fd926adbdeeb0412",
+        "Size": 102420
+    },
+    {
+        "Path": "system/dsetup.dll",
+        "Md5": "230173f19c0ad3648b455f50c9088ea2",
+        "Size": 62996
+    },
+    {
+        "Path": "system/Editor.u",
+        "Md5": "1ff6a7867e913ab658d2ab9cec5a3a19",
+        "Size": 593932
+    },
+    {
+        "Path": "system/encvag.dll",
+        "Md5": "dc48574dc8c7b4df5708a53af50afe8a",
+        "Size": 150548
+    },
+    {
+        "Path": "system/engine.dll",
+        "Md5": "706f3ef6278696086e7c0402772d3c52",
+        "Size": 30704468
+    },
+    {
+        "Path": "system/Engine.int",
+        "Md5": "45c7986a9adeac3ffca2c7facc4b7f42",
+        "Size": 6700
+    },
+    {
+        "Path": "system/Engine.u",
+        "Md5": "f3cd3d4bff79246c6d54ab381de8e7ca",
+        "Size": 2805259
+    },
+    {
+        "Path": "system/entereventgrp.dat",
+        "Md5": "57091c5cb4acb9fc933ecee6e30f6d5d",
+        "Size": 4016
+    },
+    {
+        "Path": "system/Env.int",
+        "Md5": "4e5ca4e18d289eafe238878988022908",
+        "Size": 5943
+    },
+    {
+        "Path": "system/etcitemgrp.dat",
+        "Md5": "608e9a68d5184076b6f9b88ce0f2a851",
+        "Size": 80560
+    },
+    {
+        "Path": "system/eula-e.dat",
+        "Md5": "f0305dbbcbb503f04b78cb1b5ddb655b",
+        "Size": 12464
+    },
+    {
+        "Path": "system/Fire.dll",
+        "Md5": "e44f5b666f55298a352527bb1b53b7b2",
+        "Size": 319488
+    },
+    {
+        "Path": "system/Fire.u",
+        "Md5": "d3627a58a9339565ef9a313c58130c24",
+        "Size": 15491
+    },
+    {
+        "Path": "system/GameGuard.des",
+        "Md5": "f81a1da22f5ad2acf02916bc17f3d0f7",
+        "Size": 153375
+    },
+    {
+        "Path": "system/GamePlay.u",
+        "Md5": "f0cff07eb8318e45aafdb8fdd32abe44",
+        "Size": 212008
+    },
+    {
+        "Path": "system/gametip-e.dat",
+        "Md5": "5f3450cf21235c6d447720ccd1751eb1",
+        "Size": 12976
+    },
+    {
+        "Path": "system/hair.int",
+        "Md5": "be811c29add473585211b2608d6f7b89",
+        "Size": 110933
+    },
+    {
+        "Path": "system/hairaccessarygrp.dat",
+        "Md5": "7f76b50507def0bef398a9bccbdb4fe2",
+        "Size": 432
+    },
+    {
+        "Path": "system/hairaccessorylocgrp.dat",
+        "Md5": "18400cc2c672faee6c449425b9876ffb",
+        "Size": 4144
+    },
+    {
+        "Path": "system/hairgrp.dat",
+        "Md5": "81349991b1ae176351f084c593d44d90",
+        "Size": 304
+    },
+    {
+        "Path": "system/helmetgrp.dat",
+        "Md5": "5236b0942344ebd379e01a4aae681feb",
+        "Size": 432
+    },
+    {
+        "Path": "system/hennagrp-e.dat",
+        "Md5": "931170d91cb160faa474c07fedb79f42",
+        "Size": 1968
+    },
+    {
+        "Path": "system/huntingzone-e.dat",
+        "Md5": "a3d16e5b39a45ea699889b205a080438",
+        "Size": 5680
+    },
+    {
+        "Path": "system/ifc23.dll",
+        "Md5": "3a1970d3e997b018fbc776560740b95e",
+        "Size": 233492
+    },
+    {
+        "Path": "system/interface.u",
+        "Md5": "52acf85397507998de3d6e89eca9c83c",
+        "Size": 1964561
+    },
+    {
+        "Path": "system/interface.xdat",
+        "Md5": "552d177e4ce363509066ec9380a99e03",
+        "Size": 534267
+    },
+    {
+        "Path": "system/IpDrv.dll",
+        "Md5": "4dcd3f45a05b962b458b13969c5f906b",
+        "Size": 491540
+    },
+    {
+        "Path": "system/ipdrv.int",
+        "Md5": "abb94b3e3f7807e0e4d698f4600b4777",
+        "Size": 1840
+    },
+    {
+        "Path": "system/IpDrv.u",
+        "Md5": "e37822ca6bd9ded36858ebbe91f5a6ba",
+        "Size": 73703
+    },
+    {
+        "Path": "system/itemname-e.dat",
+        "Md5": "fae434ec1b08b3fde761432d37bf5718",
+        "Size": 238640
+    },
+    {
+        "Path": "system/L2.exe",
+        "Md5": "23566916e2f5f164ff752e23d8c61491",
+        "Size": 491540
+    },
+    {
+        "Path": "system/l2.ini",
+        "Md5": "100fb66394036d9bffc9c785e715155f",
+        "Size": 3376
+    },
+    {
+        "Path": "system/l2.int",
+        "Md5": "b587a9068b55dc2de7f6c1244cddb446",
+        "Size": 163
+    },
+    {
+        "Path": "system/L2CompiledShader.bin",
+        "Md5": "f1d3ff8443297732862df21dc4e57262",
+        "Size": 4
+    },
+    {
+        "Path": "system/l2forecf.ffe",
+        "Md5": "3278e5b9d738e71c4ea3f3aaa0a4ff4e",
+        "Size": 3516
+    },
+    {
+        "Path": "system/largefont-e.gly",
+        "Md5": "e41d6430c129e2c448068434005098de",
+        "Size": 1560
+    },
+    {
+        "Path": "system/largefont.gly",
+        "Md5": "22c176ebcc7b897d962488bfdc6db109",
+        "Size": 185632
+    },
+    {
+        "Path": "system/Lineage2us.ini",
+        "Md5": "df2166ead1f750e22f8ebc18dc1fa14c",
+        "Size": 371
+    },
+    {
+        "Path": "system/LineageCreature.dll",
+        "Md5": "b212dacdecbab47cc09db633c232cf18",
+        "Size": 131092
+    },
+    {
+        "Path": "system/LineageCreature.u",
+        "Md5": "4dafe33542b9e86519a2931eea1b0244",
+        "Size": 12054
+    },
+    {
+        "Path": "system/LineageDeco.u",
+        "Md5": "f71e69c0f16a285dc860f63bfdf93747",
+        "Size": 6752
+    },
+    {
+        "Path": "system/lineageeffect.u",
+        "Md5": "65f0dbb83a8dc7c859fd990d7b2ded0e",
+        "Size": 2006536
+    },
+    {
+        "Path": "system/lineageenv.dll",
+        "Md5": "3c2506853038560aa66d5da32dfc795f",
+        "Size": 131092
+    },
+    {
+        "Path": "system/lineageenv.u",
+        "Md5": "8982d65168e1319770237efc3d0fd4e4",
+        "Size": 12049
+    },
+    {
+        "Path": "system/LineageMonster.int",
+        "Md5": "4decc0da90c43b184c90da2b37532983",
+        "Size": 527907
+    },
+    {
+        "Path": "system/LineageMonster.u",
+        "Md5": "512232dbc8df6d027363c9925d86d0cd",
+        "Size": 176945
+    },
+    {
+        "Path": "system/lineagemonster2.int",
+        "Md5": "a071eaea74982f0c3174c01669e02bcf",
+        "Size": 151403
+    },
+    {
+        "Path": "system/LineageMonster2.u",
+        "Md5": "74bec9c4e3384885caca83590ef240cc",
+        "Size": 68190
+    },
+    {
+        "Path": "system/LineageMonster3.int",
+        "Md5": "0825b163588917b58e548d7f58b85667",
+        "Size": 55710
+    },
+    {
+        "Path": "system/LineageMonster3.u",
+        "Md5": "2838c03a1d38a218f68b7101bd6a5b76",
+        "Size": 79016
+    },
+    {
+        "Path": "system/LineageNpc.int",
+        "Md5": "2a764fe31719eba8f34b73212c6d41fd",
+        "Size": 103714
+    },
+    {
+        "Path": "system/lineagenpc.u",
+        "Md5": "a5de036e6c69ffddd386fb7f33bb699e",
+        "Size": 91687
+    },
+    {
+        "Path": "system/lineagenpc2.int",
+        "Md5": "fe9fdd5785cba73be460cbf719a5088f",
+        "Size": 4344
+    },
+    {
+        "Path": "system/lineagenpc2.u",
+        "Md5": "4d603979200efcc17be4dbf342358799",
+        "Size": 14464
+    },
+    {
+        "Path": "system/lineagenpcev.u",
+        "Md5": "a569ba469c17db6fe5dbd9e5b6170af6",
+        "Size": 12192
+    },
+    {
+        "Path": "system/LineageVehicle.u",
+        "Md5": "51764074182854077db32528223e2678",
+        "Size": 9084
+    },
+    {
+        "Path": "system/lineagewarrior.int",
+        "Md5": "cbdee753c6823cc3fea22054ffe4eb51",
+        "Size": 193542
+    },
+    {
+        "Path": "system/LineageWarrior.u",
+        "Md5": "ccf42641f30c4639ed8d316b9a4e1f42",
+        "Size": 31540
+    },
+    {
+        "Path": "system/Localization.ini",
+        "Md5": "fba90399d006ff4a842d1ef832bfb5df",
+        "Size": 3647
+    },
+    {
+        "Path": "system/logongrp.dat",
+        "Md5": "d3962a056a145b7c655618754b06870c",
+        "Size": 432
+    },
+    {
+        "Path": "system/mobskillanimgrp.dat",
+        "Md5": "f8fdbe0b747e90205493d560e13e0b58",
+        "Size": 67632
+    },
+    {
+        "Path": "system/msxml4.dll",
+        "Md5": "7851d6cfa3aa0b41444978f2eac40fe1",
+        "Size": 1233940
+    },
+    {
+        "Path": "system/msxml4a.dll",
+        "Md5": "31af8904d926b6edf664e420e0e58865",
+        "Size": 44564
+    },
+    {
+        "Path": "system/msxml4r.dll",
+        "Md5": "644031676f66bc9dbc1989d2f73044e6",
+        "Size": 82452
+    },
+    {
+        "Path": "system/musicinfo.dat",
+        "Md5": "1a8842ebf2fadf1a86655fa3df8d7977",
+        "Size": 3376
+    },
+    {
+        "Path": "system/nosleep.dll",
+        "Md5": "e70afa303842dba60ff0e8cefea3e513",
+        "Size": 3072
+    },
+    {
+        "Path": "system/npcgrp.dat",
+        "Md5": "eaa381526710decdee76e84df38e3acc",
+        "Size": 233392
+    },
+    {
+        "Path": "system/npcname-e.dat",
+        "Md5": "6b0f38e78ad10b7f30409727e3238261",
+        "Size": 51248
+    },
+    {
+        "Path": "system/npkcrypt.dll",
+        "Md5": "a89a8d11cd3c9d8c75b91ea40e3a38ff",
+        "Size": 409700
+    },
+    {
+        "Path": "system/npkcrypt.sys",
+        "Md5": "fd9666a8eb88e713c18e2e90f6e746d0",
+        "Size": 23217
+    },
+    {
+        "Path": "system/npkcrypt.vxd",
+        "Md5": "2a76ab245f89c3a27bc4537e1a8e5450",
+        "Size": 26344
+    },
+    {
+        "Path": "system/npkcusb.sys",
+        "Md5": "e37c3c2c77e72e39df9f56c33c40d3bf",
+        "Size": 15472
+    },
+    {
+        "Path": "system/npkpdb.dll",
+        "Md5": "755f8b8bebc46d524ed232fb46f44575",
+        "Size": 53268
+    },
+    {
+        "Path": "system/nwindow.dll",
+        "Md5": "4ad629893c278777987da63a2792c6ad",
+        "Size": 3850260
+    },
+    {
+        "Path": "system/nwindow.u",
+        "Md5": "8ba34e2592fba8e6a283f9d6fb606fba",
+        "Size": 251512
+    },
+    {
+        "Path": "system/obscene-e.dat",
+        "Md5": "08414f1587eed1fc6522827fea59df94",
+        "Size": 304
+    },
+    {
+        "Path": "system/ogg.dll",
+        "Md5": "092f269b0102e2a7d3495148d1e76b02",
+        "Size": 61460
+    },
+    {
+        "Path": "system/openal32.dll",
+        "Md5": "432204fee4a5cf3d9af1d518cf135def",
+        "Size": 114708
+    },
+    {
+        "Path": "system/Option.ini",
+        "Md5": "bf6b0315ff98384412455f8ff8992432",
+        "Size": 1230
+    },
+    {
+        "Path": "system/optiondata_client-e.dat",
+        "Md5": "c528d59df629459fc3e26325dc4278ca",
+        "Size": 96176
+    },
+    {
+        "Path": "system/orc.dll",
+        "Md5": "292658615568b670ca54cdf0c7f05da1",
+        "Size": 1396756
+    },
+    {
+        "Path": "system/questname-e.dat",
+        "Md5": "0b6b87e65d5ed410a62077e00866b3a5",
+        "Size": 188464
+    },
+    {
+        "Path": "system/raiddata-e.dat",
+        "Md5": "bd2d8386dc22813543b4b6a0951f8917",
+        "Size": 29744
+    },
+    {
+        "Path": "system/recipe-c.dat",
+        "Md5": "ea92bcafe6dabde926ce501406a001aa",
+        "Size": 23856
+    },
+    {
+        "Path": "system/servername-e.dat",
+        "Md5": "c314267d8996bc0e8ff0f24e69840e8f",
+        "Size": 1328
+    },
+    {
+        "Path": "system/skillgrp.dat",
+        "Md5": "9903c1708f5faa39fbb8252761ff2913",
+        "Size": 159152
+    },
+    {
+        "Path": "system/skillname-e.dat",
+        "Md5": "671589f6667a82912f3ba048127c879e",
+        "Size": 297008
+    },
+    {
+        "Path": "system/skillsoundgrp.dat",
+        "Md5": "63099ce61fdc2d80aa71d49d82f88c0e",
+        "Size": 28080
+    },
+    {
+        "Path": "system/smallfont-e.gly",
+        "Md5": "c274f376ff0a012cec5d8cee618a0f0c",
+        "Size": 1560
+    },
+    {
+        "Path": "system/smallfont.gly",
+        "Md5": "bddb9ebcd93cf894002b59bc9333e278",
+        "Size": 181800
+    },
+    {
+        "Path": "system/soulshot.int",
+        "Md5": "85894ce226181bf3328f2b2051d7534c",
+        "Size": 1702
+    },
+    {
+        "Path": "system/staticobject-e.dat",
+        "Md5": "4701e1b98ff8ac4c494afc35e4e040c7",
+        "Size": 2480
+    },
+    {
+        "Path": "system/symbolname-e.dat",
+        "Md5": "336a7e4829ec9510786cbacb04d13c91",
+        "Size": 304
+    },
+    {
+        "Path": "system/sysstring-e.dat",
+        "Md5": "adef850bf3d6f5cc08a5433e18599855",
+        "Size": 15024
+    },
+    {
+        "Path": "system/systemmsg-e.dat",
+        "Md5": "5cf0cd18dd644d363b8a51a91591dd35",
+        "Size": 49840
+    },
+    {
+        "Path": "system/s_info.ini",
+        "Md5": "021c2ca80f19edb24f348e06cab7ee23",
+        "Size": 40
+    },
+    {
+        "Path": "system/timeenv0.int",
+        "Md5": "9184b187a7bdfe8cb63d271ff6a15824",
+        "Size": 13233
+    },
+    {
+        "Path": "system/timeenv1.int",
+        "Md5": "f1e4a4ea1f3ee87a44fe916ad1204806",
+        "Size": 14452
+    },
+    {
+        "Path": "system/timeenv2.int",
+        "Md5": "56af8b2d1a661d541e5d1ce059718fc5",
+        "Size": 13322
+    },
+    {
+        "Path": "system/timeenv3.int",
+        "Md5": "89f8f812ab31bdeaade6c596ef117c67",
+        "Size": 14099
+    },
+    {
+        "Path": "system/ttfontinfo.ini",
+        "Md5": "cbeb6d54158002449958b24dfb13bffd",
+        "Size": 795
+    },
+    {
+        "Path": "system/udebugmenu.u",
+        "Md5": "8195778fb290ccd62c5def2f6671c11c",
+        "Size": 263641
+    },
+    {
+        "Path": "system/user.ini",
+        "Md5": "9e5470b5af22bdcd30d47d64505779e6",
+        "Size": 4400
+    },
+    {
+        "Path": "system/UWindow.u",
+        "Md5": "5d7caf94751bf1fcdebb9b2bef502b02",
+        "Size": 693798
+    },
+    {
+        "Path": "system/variationeffectgrp-e.dat",
+        "Md5": "43c84bbaa090e01c6a79e8f44a92c673",
+        "Size": 1456
+    },
+    {
+        "Path": "system/vorbis.dll",
+        "Md5": "991b6cebec143d42e2e837a85a67fbc1",
+        "Size": 249876
+    },
+    {
+        "Path": "system/vorbisfile.dll",
+        "Md5": "79dc3fb2408aafb15a0c7432c3498256",
+        "Size": 106516
+    },
+    {
+        "Path": "system/weapongrp.dat",
+        "Md5": "80471682976012619e76becaea624494",
+        "Size": 78128
+    },
+    {
+        "Path": "system/wform.bm",
+        "Md5": "6beeb71b81d2aa500280810da4172446",
+        "Size": 527005
+    },
+    {
+        "Path": "system/Window.dll",
+        "Md5": "769b7a97b3ef8693dcedef0916005767",
+        "Size": 749588
+    },
+    {
+        "Path": "system/window.int",
+        "Md5": "a9fabf07645c5dcab362139139e10d7c",
+        "Size": 2337
+    },
+    {
+        "Path": "system/WindowsInfo.ini",
+        "Md5": "9739f5fbe2d81eac3e332bba453a3b5d",
+        "Size": 2141
+    },
+    {
+        "Path": "system/WinDrv.dll",
+        "Md5": "a01ca9cbe89ce9ab665ba4d64cf15865",
+        "Size": 630804
+    },
+    {
+        "Path": "system/windrv.int",
+        "Md5": "5583ec64b74222aabff428f0c7e3e615",
+        "Size": 729
+    },
+    {
+        "Path": "system/wrap_oal.dll",
+        "Md5": "3f4a774be86425d0fe098f9d82c12de9",
+        "Size": 409620
+    },
+    {
+        "Path": "system/zonename-e.dat",
+        "Md5": "fe92d5ca89b4931d2f15496a162a61a3",
+        "Size": 6064
+    }
+]
