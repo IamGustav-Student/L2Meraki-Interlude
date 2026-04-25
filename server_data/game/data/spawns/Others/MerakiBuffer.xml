@@ -23,11 +23,12 @@
 		<npc id="50008" x="87098" y="-143398" z="-1293" heading="15584" respawnDelay="5" /> <!-- Near GK 31964 -->
 		<npc id="50008" x="-84058" y="244654" z="-3728" heading="40960" respawnDelay="5" /> <!-- Near GK 30006 -->
 		
-		<!-- Racial Starting Points -->
-		<npc id="50008" x="-90432" y="248720" z="-3548" heading="0" respawnDelay="5" /> <!-- Human Start -->
-		<npc id="50008" x="45904" y="41904" z="-3452" heading="0" respawnDelay="5" /> <!-- Elf Start -->
-		<npc id="50008" x="27856" y="11720" z="-4168" heading="0" respawnDelay="5" /> <!-- Dark Elf Start -->
-		<npc id="50008" x="-56804" y="-113268" z="-616" heading="0" respawnDelay="5" /> <!-- Orc Start -->
-		<npc id="50008" x="108756" y="-175200" z="-454" heading="0" respawnDelay="5" /> <!-- Dwarf Start -->
+		<!-- Racial Starting Points (Exact Spawn) -->
+		<npc id="50008" x="-71338" y="258271" z="-3104" heading="0" respawnDelay="5" /> <!-- Human Fighter Start -->
+		<npc id="50008" x="-90875" y="248162" z="-3570" heading="0" respawnDelay="5" /> <!-- Human Mystic Start -->
+		<npc id="50008" x="46045" y="41251" z="-3440" heading="0" respawnDelay="5" /> <!-- Elf Start -->
+		<npc id="50008" x="28295" y="11063" z="-4224" heading="0" respawnDelay="5" /> <!-- Dark Elf Start -->
+		<npc id="50008" x="-56733" y="-113459" z="-690" heading="0" respawnDelay="5" /> <!-- Orc Start -->
+		<npc id="50008" x="108644" y="-173947" z="-400" heading="0" respawnDelay="5" /> <!-- Dwarf Start -->
 	</spawn>
 </list>
