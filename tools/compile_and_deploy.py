@@ -16,41 +16,44 @@ def run_cmd(cmd, cwd=TOOLS_DIR):
         return False
     return True
 
-def update_txt_files():
-    # Correct itemname-e
-    itemname_path = os.path.join(TOOLS_DIR, 'itemname-e_final.txt')
-    with open(itemname_path, 'r', encoding='utf-8') as f:
-        lines = f.readlines()
+def restore_from_masters():
+    print("Restoring base files from master dumps...")
     
+    # 1. Restore ItemName
+    with open(os.path.join(TOOLS_DIR, 'itemname_master.txt'), 'r', encoding='utf-8') as f:
+        # Skip header
+        lines = f.readlines()[1:]
+    
+    # Filter out existing VIP IDs if any
     ids_to_remove = {'95000', '95001', '95002', '9500', '9501', '9502'}
-    new_lines = [l for l in lines if l.split('\t')[0].strip() not in ids_to_remove]
+    new_itemname = [l for l in lines if l.split('\t')[0].strip() not in ids_to_remove]
     
-    new_lines.append('9500\tVIP Spirit - 7 Days\t\ta,Enhanced rates and stats for 7 days.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
-    new_lines.append('9501\tVIP Spirit - 15 Days\t\ta,Enhanced rates and stats for 15 days.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
-    new_lines.append('9502\tVIP Spirit - 30 Days\t\ta,Enhanced rates and stats for 30 days.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
+    # Add VIP
+    new_itemname.append('9500\tVIP Spirit - 7 Days\t\ta,Enhanced rates and stats for 7 days.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
+    new_itemname.append('9501\tVIP Spirit - 15 Days\t\ta,Enhanced rates and stats for 15 days.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
+    new_itemname.append('9502\tVIP Spirit - 30 Days\t\ta,Enhanced rates and stats for 30 days.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
     
-    with open(itemname_path, 'w', encoding='utf-8') as f:
-        f.writelines(new_lines)
+    with open(os.path.join(TOOLS_DIR, 'itemname-e_final.txt'), 'w', encoding='utf-8') as f:
+        f.writelines(new_itemname)
         
-    # Correct etcitemgrp
-    etc_path = os.path.join(TOOLS_DIR, 'etcitemgrp_final.txt')
-    with open(etc_path, 'r', encoding='utf-8') as f:
-        lines = f.readlines()
+    # 2. Restore EtcItemGrp
+    with open(os.path.join(TOOLS_DIR, 'etcitemgrp_master.txt'), 'r', encoding='utf-8') as f:
+        # Skip header
+        lines = f.readlines()[1:]
         
-    new_lines = [l for l in lines if len(l.split('\t')) > 1 and l.split('\t')[1].strip() not in ids_to_remove]
+    new_etc = [l for l in lines if l.split('\t')[1].strip() not in ids_to_remove]
     
-    # Updated icons to guaranteed Interlude ones
-    # 9500: Silver Coin, 9501: Gold Coin, 9502: Royal Membership
+    # Add VIP (guaranteed Interlude icons)
     line_9500 = '2\t9500\t0\t3\t2\t5\t0\tdropitems.drop_sack_m00\t\t\tdropitemstex.drop_sack_t00\t\t\ticon.etc_magic_coin_02_i00\t\t\t\t\t-1\t0\t17\t0\t0\t1\t\t1\t\tItemSound.itemdrop_sack\t\t0\t0\t0\n'
     line_9501 = '2\t9501\t0\t3\t2\t5\t0\tdropitems.drop_sack_m00\t\t\tdropitemstex.drop_sack_t00\t\t\ticon.etc_magic_coin_01_i00\t\t\t\t\t-1\t0\t17\t0\t0\t1\t\t1\t\tItemSound.itemdrop_sack\t\t0\t0\t0\n'
     line_9502 = '2\t9502\t0\t3\t2\t5\t0\tdropitems.drop_sack_m00\t\t\tdropitemstex.drop_sack_t00\t\t\ticon.etc_royal_membership_i00\t\t\t\t\t-1\t0\t17\t0\t0\t1\t\t1\t\tItemSound.itemdrop_sack\t\t0\t0\t0\n'
     
-    new_lines.append(line_9500)
-    new_lines.append(line_9501)
-    new_lines.append(line_9502)
+    new_etc.append(line_9500)
+    new_etc.append(line_9501)
+    new_etc.append(line_9502)
     
-    with open(etc_path, 'w', encoding='utf-8') as f:
-        f.writelines(new_lines)
+    with open(os.path.join(TOOLS_DIR, 'etcitemgrp_final.txt'), 'w', encoding='utf-8') as f:
+        f.writelines(new_etc)
 
 def sanitize_line(line, expected_fields):
     parts = line.strip('\n\r').split('\t')
@@ -81,7 +84,7 @@ def process_file(txt_name, ddf_name, dat_name, expected_fields):
     return False
 
 if __name__ == "__main__":
-    update_txt_files()
+    restore_from_masters()
     
     # Process main files
     s1 = process_file('itemname-e_final.txt', 'itemname-e.ddf', 'itemname-e.dat', 13)
