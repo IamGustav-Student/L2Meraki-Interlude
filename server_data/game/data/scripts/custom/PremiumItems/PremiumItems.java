@@ -53,6 +53,7 @@ public class PremiumItems extends Script implements IItemHandler
 		if (days > 0)
 		{
 			PremiumManager.getInstance().addPremiumTime(player.getAccountName(), days, TimeUnit.DAYS);
+			player.setPremiumStatus(true);
 			player.destroyItem(ItemProcessType.DESTROY, item, player, true);
 			player.sendMessage("¡Felicidades! Tu cuenta ahora tiene estado Premium por " + days + " días.");
 			player.sendMessage("Usa el comando .premium para ver los detalles de tu suscripción.");
