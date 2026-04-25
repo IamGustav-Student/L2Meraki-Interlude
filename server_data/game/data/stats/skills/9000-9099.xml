@@ -3,10 +3,8 @@
 	<skill id="9000" levels="3" name="Spirit of Meraki">
 		<!-- Passive VIP Skill: Enhanced rates and stats. -->
 		<table name="#rExp">1.2 1.5 2.0</table>
-		<table name="#rSp">1.2 1.5 2.0</table>
-		<table name="#pve">1.05 1.10 1.15</table>
+		<table name="#spd">1.05 1.10 1.15</table>
 		<table name="#weight">1.2 1.5 2.0</table>
-		<table name="#spd">1.0 1.05 1.1</table>
 		<icon>icon.skill1323</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -15,14 +13,20 @@
 			<effect name="Buff">
 				<!-- Rates -->
 				<mul stat="rExp">#rExp</mul>
-				<mul stat="rSp">#rSp</mul>
-				<!-- PvE Only Stats -->
-				<mul stat="pvePhysDmg">#pve</mul>
-				<mul stat="pveMagicalDmg">#pve</mul>
-				<mul stat="pvePhysSkillsDmg">#pve</mul>
-				<!-- Global Stats -->
+				
+				<!-- Combat Stats -->
+				<mul stat="pAtk">#spd</mul>
+				<mul stat="mAtk">#spd</mul>
+				<mul stat="pDef">#spd</mul>
+				<mul stat="mDef">#spd</mul>
 				<mul stat="pAtkSpd">#spd</mul>
 				<mul stat="mAtkSpd">#spd</mul>
+				<mul stat="runSpd">#spd</mul>
+				
+				<!-- Vitality Stats -->
+				<mul stat="maxHp">#spd</mul>
+				<mul stat="maxMp">#spd</mul>
+				<mul stat="maxCp">#spd</mul>
 				<mul stat="weightLimit">#weight</mul>
 			</effect>
 		</effects>
