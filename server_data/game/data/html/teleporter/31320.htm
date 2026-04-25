@@ -1,9 +1,64 @@
-<html><body>Gatekeeper Ilyana:<br>
-From ancient times, this town has been a center of politics, economy and military strategy for the northern part of the continent. As the capital of Elmore kingdom, it remains a vital hub.<br>
-What brings you to the Rune Township?<br>
-<a action="bypass npc_%objectId%_showTeleports">"I want to teleport."</a><br>
-<a action="bypass -h npc_%objectId%_multisell 002">"I wish to exchange for the Dimensional Diamond."</a><br>
-<a action="bypass npc_%objectId%_showNoblesSelect">"I want to use the For Noblesse Only: Teleport."</a><br>
-<a action="bypass -h Script TeleportToRaceTrack TELEPORT" msg="811;Monster Race Track">"I want free admission to the Monster Race Track."</a><br>
-<a action="bypass Script">Quest</a>
-</body></html>
+<html>
+<title>Gatekeeper - Meraki</title>
+
+<body>
+	<center>
+		<img src="L2UI_CH3.onscrmsg_pattern01_1" width=300 height=32>
+		<br>
+		<font color="LEVEL">Meraki Global Gatekeeper</font>
+		<br>
+		<table width=270>
+			<tr>
+				<td align=center>
+					<table width=250 bgcolor=000000>
+						<tr>
+							<td align=right width=40><img src="icon.etc_adventure_map_i00" width=32 height=32></td>
+							<td align=center width=150>
+								<font color="LEVEL">Teleport Global</font>
+								<br1>Selecciona tu destino
+							</td>
+							<td align=left width=40><img src="icon.etc_adventure_map_i00" width=32 height=32></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<table width=240>
+			<tr>
+				<td align=right><img src="icon.etc_castle_i00" width=32 height=32></td>
+				<td align=center><button value="Towns" action="bypass -h npc_%objectId%_Chat 10" width=85 height=21
+						back="L2UI_ch3.Btn1_normalOn" fore="L2UI_ch3.Btn1_normalOn"></td>
+				<td align=left><img src="icon.etc_castle_i00" width=32 height=32></td>
+			</tr>
+			<tr>
+				<td align=right><img src="icon.etc_old_map_i00" width=32 height=32></td>
+				<td align=center><button value="Farm Zones" action="bypass -h npc_%objectId%_Chat 11" width=85 height=21
+						back="L2UI_ch3.Btn1_normalOn" fore="L2UI_ch3.Btn1_normalOn"></td>
+				<td align=left><img src="icon.etc_old_map_i00" width=32 height=32></td>
+			</tr>
+			<tr>
+				<td align=right><img src="icon.etc_desert_i00" width=32 height=32></td>
+				<td align=center><button value="Leveling" action="bypass -h npc_%objectId%_Chat 12" width=85 height=21
+						back="L2UI_ch3.Btn1_normalOn" fore="L2UI_ch3.Btn1_normalOn"></td>
+				<td align=left><img src="icon.etc_desert_i00" width=32 height=32></td>
+			</tr>
+			<tr>
+				<td align=right><img src="icon.skill4045" width=32 height=32></td>
+				<td align=center><button value="Noblesse" action="bypass -h npc_%objectId%_showNoblesSelect" width=85 height=21
+						back="L2UI_ch3.Btn1_normalOn" fore="L2UI_ch3.Btn1_normalOn"></td>
+				<td align=left><img src="icon.skill4045" width=32 height=32></td>
+			</tr>
+			<tr>
+				<td align=right><img src="icon.etc_whiteday_herb_i00" width=32 height=32></td>
+				<td align=center><button value="Arenas" action="bypass -h npc_%objectId%_showTeleports list3" width=85
+						height=21 back="L2UI_ch3.Btn1_normalOn" fore="L2UI_ch3.Btn1_normalOn"></td>
+				<td align=left><img src="icon.etc_whiteday_herb_i00" width=32 height=32></td>
+			</tr>
+		</table>
+		<br>
+		<img src="L2UI_CH3.onscrmsg_pattern01_1" width=300 height=32>
+	</center>
+</body>
+
+</html>
