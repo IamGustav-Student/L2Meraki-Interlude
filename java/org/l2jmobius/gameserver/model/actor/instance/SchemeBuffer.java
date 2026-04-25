@@ -180,7 +180,8 @@ public class SchemeBuffer extends Npc
 						continue;
 					}
 					
-					final Skill skill = skillData.getSkill(skillId, holder.getLevel());
+					final int level = player.hasPremiumStatus() ? skillData.getMaxLevel(skillId) : holder.getLevel();
+					final Skill skill = skillData.getSkill(skillId, level);
 					if (skill != null)
 					{
 						skill.applyEffects(this, target);
@@ -385,7 +386,8 @@ public class SchemeBuffer extends Npc
 				final BuffSkillHolder holder = schemeBufferTable.getAvailableBuff(category, skillId);
 				if (holder != null)
 				{
-					final Skill skill = skillData.getSkill(skillId, holder.getLevel());
+					final int level = player.hasPremiumStatus() ? skillData.getMaxLevel(skillId) : holder.getLevel();
+					final Skill skill = skillData.getSkill(skillId, level);
 					if (skill != null)
 					{
 						skill.applyEffects(this, target);
@@ -644,7 +646,8 @@ public class SchemeBuffer extends Npc
 				continue;
 			}
 			
-			final Skill skill = skillData.getSkill(skillId, holder.getLevel());
+			final int level = player.hasPremiumStatus() ? skillData.getMaxLevel(skillId) : holder.getLevel();
+			final Skill skill = skillData.getSkill(skillId, level);
 			if (skill != null)
 			{
 				skill.applyEffects(this, target);
