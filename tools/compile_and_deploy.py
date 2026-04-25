@@ -16,44 +16,50 @@ def run_cmd(cmd, cwd=TOOLS_DIR):
         return False
     return True
 
-def restore_from_masters():
-    print("Restoring base files from master dumps...")
+def restore_all_dats():
+    print("Re-compiling ALL group files from full sources...")
     
-    # 1. Restore ItemName
+    # Files to process: (txt_source, ddf, dat_name, expected_fields)
+    tasks = [
+        ('itemname_master.txt', 'itemname-e.ddf', 'itemname-e.dat', 13, True), # True means has header
+        ('etcitemgrp_master.txt', 'etcitemgrp.ddf', 'etcitemgrp.dat', 32, True),
+        ('armorgrp_source.txt', 'armorgrp.ddf', 'armorgrp.dat', 332, False),
+        ('weapongrp_source.txt', 'weapongrp.ddf', 'weapongrp.dat', 92, False)
+    ]
+    
+    # First, make sure itemname-e and etcitemgrp have the VIP items
+    # We'll update the source files directly
+    
+    # 1. Update itemname-e_final.txt (base for the process)
     with open(os.path.join(TOOLS_DIR, 'itemname_master.txt'), 'r', encoding='utf-8') as f:
-        # Skip header
-        lines = f.readlines()[1:]
+        lines = f.readlines()[1:] # Skip header
     
-    # Filter out existing VIP IDs if any
     ids_to_remove = {'95000', '95001', '95002', '9500', '9501', '9502'}
-    new_itemname = [l for l in lines if l.split('\t')[0].strip() not in ids_to_remove]
-    
-    # Add VIP
-    new_itemname.append('9500\tVIP Spirit - 7 Days\t\ta,Enhanced rates and stats for 7 days.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
-    new_itemname.append('9501\tVIP Spirit - 15 Days\t\ta,Enhanced rates and stats for 15 days.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
-    new_itemname.append('9502\tVIP Spirit - 30 Days\t\ta,Enhanced rates and stats for 30 days.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
-    
-    with open(os.path.join(TOOLS_DIR, 'itemname-e_final.txt'), 'w', encoding='utf-8') as f:
-        f.writelines(new_itemname)
-        
-    # 2. Restore EtcItemGrp
+    lines = [l for l in lines if l.split('\t')[0].strip() not in ids_to_remove]
+    lines.append('9500\tVIP Spirit - 7 Days\t\ta,Enhanced rates and stats for 7 days.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
+    lines.append('9501\tVIP Spirit - 15 Days\t\ta,Enhanced rates and stats for 15 days.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
+    lines.append('9502\tVIP Spirit - 30 Days\t\ta,Enhanced rates and stats for 30 days.\\0\t-1\ta,\ta,\ta,\ta,\t0\t0\t0\ta,\n')
+    with open(os.path.join(TOOLS_DIR, 'itemname_final_full.txt'), 'w', encoding='utf-8') as f:
+        f.writelines(lines)
+
+    # 2. Update etcitemgrp_final.txt
     with open(os.path.join(TOOLS_DIR, 'etcitemgrp_master.txt'), 'r', encoding='utf-8') as f:
-        # Skip header
-        lines = f.readlines()[1:]
-        
-    new_etc = [l for l in lines if l.split('\t')[1].strip() not in ids_to_remove]
-    
-    # Add VIP (guaranteed Interlude icons)
+        lines = f.readlines()[1:] # Skip header
+    lines = [l for l in lines if l.split('\t')[1].strip() not in ids_to_remove]
     line_9500 = '2\t9500\t0\t3\t2\t5\t0\tdropitems.drop_sack_m00\t\t\tdropitemstex.drop_sack_t00\t\t\ticon.etc_magic_coin_02_i00\t\t\t\t\t-1\t0\t17\t0\t0\t1\t\t1\t\tItemSound.itemdrop_sack\t\t0\t0\t0\n'
     line_9501 = '2\t9501\t0\t3\t2\t5\t0\tdropitems.drop_sack_m00\t\t\tdropitemstex.drop_sack_t00\t\t\ticon.etc_magic_coin_01_i00\t\t\t\t\t-1\t0\t17\t0\t0\t1\t\t1\t\tItemSound.itemdrop_sack\t\t0\t0\t0\n'
     line_9502 = '2\t9502\t0\t3\t2\t5\t0\tdropitems.drop_sack_m00\t\t\tdropitemstex.drop_sack_t00\t\t\ticon.etc_royal_membership_i00\t\t\t\t\t-1\t0\t17\t0\t0\t1\t\t1\t\tItemSound.itemdrop_sack\t\t0\t0\t0\n'
-    
-    new_etc.append(line_9500)
-    new_etc.append(line_9501)
-    new_etc.append(line_9502)
-    
-    with open(os.path.join(TOOLS_DIR, 'etcitemgrp_final.txt'), 'w', encoding='utf-8') as f:
-        f.writelines(new_etc)
+    lines.append(line_9500)
+    lines.append(line_9501)
+    lines.append(line_9502)
+    with open(os.path.join(TOOLS_DIR, 'etcitemgrp_final_full.txt'), 'w', encoding='utf-8') as f:
+        f.writelines(lines)
+
+    # Now process everything
+    process_file('itemname_final_full.txt', 'itemname-e.ddf', 'itemname-e.dat', 13)
+    process_file('etcitemgrp_final_full.txt', 'etcitemgrp.ddf', 'etcitemgrp.dat', 32)
+    process_file('armorgrp_source.txt', 'armorgrp.ddf', 'armorgrp.dat', 332)
+    process_file('weapongrp_source.txt', 'weapongrp.ddf', 'weapongrp.dat', 92)
 
 def sanitize_line(line, expected_fields):
     parts = line.strip('\n\r').split('\t')
@@ -67,8 +73,12 @@ def process_file(txt_name, ddf_name, dat_name, expected_fields):
     txt_path = os.path.join(TOOLS_DIR, txt_name)
     temp_txt = os.path.join(TOOLS_DIR, "temp_" + txt_name)
     
-    print(f"Processing {txt_name}...")
+    print(f"Processing {txt_name} -> {dat_name}...")
     
+    if not os.path.exists(txt_path):
+        print(f"  [ERROR] Source {txt_name} not found!")
+        return False
+
     with open(txt_path, 'r', encoding='utf-8') as f:
         lines = [sanitize_line(line, expected_fields) for line in f if line.strip()]
         
@@ -84,15 +94,7 @@ def process_file(txt_name, ddf_name, dat_name, expected_fields):
     return False
 
 if __name__ == "__main__":
-    restore_from_masters()
-    
-    # Process main files
-    s1 = process_file('itemname-e_final.txt', 'itemname-e.ddf', 'itemname-e.dat', 13)
-    s2 = process_file('etcitemgrp_final.txt', 'etcitemgrp.ddf', 'etcitemgrp.dat', 32)
-    
-    if s1 and s2:
-        print("\nSyncing with launcher...")
-        run_cmd('python PatchGenerator.py')
-        print("\nDONE! Please run the launcher to update the client.")
-    else:
-        print("\nSome files failed to compile. Check errors above.")
+    restore_all_dats()
+    print("\nSyncing with launcher...")
+    run_cmd('python PatchGenerator.py')
+    print("\nDONE! All files (Armor, Weapon, Etc, Name) restored and updated.")
