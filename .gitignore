@@ -3,16 +3,30 @@
 .project
 .classpath
 .factorypath
+.vscode/
+.idea/
 
-# Build
+# Build and Binaries (General)
 /bin/
 /dist/
 /build/
+/publish*/
 MerakiLauncher/bin/
 MerakiLauncher/obj/
+*.pdb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Keep EXEs and DLLs only in specific folders needed for the game/tools
+# But ignore them in root and build folders
+/MerakiLauncher/*.exe
+/MerakiLauncher/*.dll
 
 # Logs
 *.log
+compile_log.txt
 /server_data/game/log/
 /server_data/login/log/
 
@@ -26,21 +40,22 @@ MerakiLauncher/obj/
 Thumbs.db
 .DS_Store
 
-# L2 Specific
+# L2 Specific and Large Data
 /server_data/game/config/hexid.txt
 /system_master/system/*.crypt.dat
+/system_master/system/*.bak
 
-# Tools Temp
-/tools/*_test.txt
-/tools/*_enc.dat
-/tools/*_new.dat
-/tools/*_v2.txt
-/tools/itemname-e.dat
-
+# Tools Temp and Scratch
 /tools/*.dec
-/tools/*_master*
-/tools/*_test*
 /tools/temp_*
 /tools/*.dat.dec
 /tools/*.compiled.dat
 /tools/*.new.dat
+/tools/*_test*
+/tools/*_master*
+/scratch/
+audit_results.txt
+
+# Media
+*.docx
+*.pdf
