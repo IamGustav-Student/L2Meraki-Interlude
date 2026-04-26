@@ -3,7 +3,6 @@
 	<spawn name="MerakiGatekeepers_Global">
 		<npc id="50009" x="146757" y="25857" z="-2013" heading="0" respawnDelay="5" /> <!-- Near Aden GK -->
 		<npc id="50009" x="15631" y="142935" z="-2704" heading="16000" respawnDelay="5" /> <!-- Near Dion GK -->
-		<npc id="50009" x="83396" y="147954" z="-3404" heading="16384" respawnDelay="5" /> <!-- Near Giran GK -->
 		<npc id="50009" x="148074" y="-55178" z="-2728" heading="48000" respawnDelay="5" /> <!-- Near Goddard GK -->
 		<npc id="50009" x="105988" y="109858" z="-3216" heading="45056" respawnDelay="5" /> <!-- Near Hardin GK -->
 		<npc id="50009" x="-84108" y="244654" z="-3728" heading="40960" respawnDelay="5" /> <!-- Near TI GK -->
