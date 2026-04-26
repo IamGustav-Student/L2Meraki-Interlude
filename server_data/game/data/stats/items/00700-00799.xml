@@ -445,7 +445,7 @@
 		<!-- A scroll of enchantment that empowers an A-Grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="SCRL_ENCHANT_WP" /> <!-- Epilogue Modification -->
+		<set name="etcitem_type" val="ANCIENT_CRYSTAL_ENCHANT_WP" /> <!-- Crystal Enchant - No delevel -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -460,7 +460,7 @@
 		<!-- A scroll of enchantment that empowers an A-Grade armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="etcitem_type" val="SCRL_ENCHANT_AM" /> <!-- Epilogue Modification -->
+		<set name="etcitem_type" val="ANCIENT_CRYSTAL_ENCHANT_AM" /> <!-- Crystal Enchant - No delevel -->
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />

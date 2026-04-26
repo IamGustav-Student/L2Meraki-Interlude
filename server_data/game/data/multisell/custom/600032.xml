@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!--  by Stev0 -->
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd" maintainEnchantment="true">
+	<npcs>
+		<npc>-1</npc>
+	</npcs>
+
+  <!-- Soulshot: B-grade -->
+  <item id="3">
+    <ingredient id="57" count="500000"/>
+    <production id="1465" count="1000"/>
+  </item>
+
+  <!-- Soulshot: C-grade -->
+  <item id="4">
+    <ingredient id="57" count="200000"/>
+    <production id="1464" count="1000"/>
+  </item>
+
+  <!-- Soulshot: D-grade -->
+  <item id="5">
+    <ingredient id="57" count="100000"/>
+    <production id="1463" count="1000"/>
+  </item>
+
+  <!-- Soulshot: No Grade -->
+  <item id="6">
+    <ingredient id="57" count="50000"/>
+    <production id="1835" count="1000"/>
+  </item>
+
+  
+  <!-- Blessed Spiritshot: B-Grade -->
+  <item id="9">
+    <ingredient id="57" count="700000"/>
+    <production id="3950" count="1000"/>
+  </item>
+
+  <!-- Blessed Spiritshot: C-Grade -->
+  <item id="10">
+    <ingredient id="57" count="600000"/>
+    <production id="3949" count="1000"/>
+  </item>
+
+  <!-- Blessed Spiritshot: D-Grade -->
+  <item id="11">
+    <ingredient id="57" count="100000"/>
+    <production id="3948" count="1000"/>
+  </item>
+
+  <!-- Blessed Spiritshot: No Grade -->
+  <item id="12">
+    <ingredient id="57" count="80000"/>
+    <production id="3947" count="1000"/>
+  </item>
+
+
+  <!-- Spiritshot: B-grade -->
+  <item id="15">
+    <ingredient id="57" count="350000"/>
+    <production id="2512" count="1000"/>
+  </item>
+
+  <!-- Spiritshot: C-grade -->
+  <item id="16">
+    <ingredient id="57" count="300000"/>
+    <production id="2511" count="1000"/>
+  </item>
+
+  <!-- Spiritshot: D-grade -->
+  <item id="17">
+    <ingredient id="57" count="50000"/>
+    <production id="2510" count="1000"/>
+  </item>
+
+  <!-- Spiritshot: No Grade -->
+  <item id="18">
+    <ingredient id="57" count="40000"/>
+    <production id="2509" count="1000"/>
+  </item>
+
+  <!-- Beast Soulshot -->
+  <item id="19">
+    <ingredient id="57" count="300000"/>
+    <production id="6645" count="1000"/>
+  </item>
+
+  <!-- Blessed Beast Spiritshot -->
+  <item id="20">
+    <ingredient id="57" count="500000"/>
+    <production id="6647" count="1000"/>
+  </item>
+
+<!-- Scroll of Escape -->
+  <item id="21">
+    <ingredient id="57" count="100000"/>
+    <production id="736" count="10"/>
+  </item>
+
+  <!-- Scroll of Resurrection -->
+  <item id="22">
+    <ingredient id="57" count="100000"/>
+    <production id="737" count="10"/>
+  </item>
+  <!-- Greater Dye of CON <Con+4 Dex-4> -->
+  <item id="23">
+    <ingredient id="57" count="10000000"/>
+    <production id="4616" count="10"/>
+  </item>
+
+  <!-- Greater Dye of CON <Con+4 Str-4> -->
+  <item id="24">
+    <ingredient id="57" count="10000000"/>
+    <production id="4615" count="10"/>
+  </item>
+
+  <!-- Greater Dye of DEX <Dex+4 Str-4> -->
+  <item id="25">
+    <ingredient id="57" count="10000000"/>
+    <production id="4617" count="10"/>
+  </item>
+
+  <!-- Greater Dye of DEX <Dex+4 Con-4> -->
+  <item id="26">
+    <ingredient id="57" count="10000000"/>
+    <production id="4618" count="10"/>
+  </item>
+
+  <!-- Greater Dye of INT <Int+4 Wit-4> -->
+  <item id="27">
+    <ingredient id="57" count="10000000"/>
+    <production id="4620" count="10"/>
+  </item>
+
+  <!-- Greater Dye of INT <Int+4 Men-4> -->
+  <item id="28">
+    <ingredient id="57" count="10000000"/>
+    <production id="4619" count="10"/>
+  </item>
+
+  <!-- Greater Dye of MEN <Men+4 Wit-4> -->
+  <item id="29">
+    <ingredient id="57" count="10000000"/>
+    <production id="4622" count="10"/>
+  </item>
+
+  <!-- Greater Dye of MEN <Men+4 Int-4> -->
+  <item id="30">
+    <ingredient id="57" count="10000000"/>
+    <production id="4621" count="10"/>
+  </item>
+
+  <!-- Greater Dye of STR <Str+4 Dex-4> -->
+  <item id="31">
+    <ingredient id="57" count="10000000"/>
+    <production id="4614" count="10"/>
+  </item>
+
+  <!-- Greater Dye of STR <Str+4 Con-4> -->
+  <item id="32">
+    <ingredient id="57" count="10000000"/>
+    <production id="4613" count="10"/>
+  </item>
+
+  <!-- Greater Dye of WIT <Wit+4 Int-4> -->
+  <item id="33">
+    <ingredient id="57" count="10000000"/>
+    <production id="4623" count="10"/>
+  </item>
+
+  <!-- Greater Dye of WIT <Wit+4 Men-4> -->
+  <item id="34">
+    <ingredient id="57" count="10000000"/>
+    <production id="4624" count="10"/>
+  </item>
+
+  <!-- Greater Dye of CON <Con+1 Dex-1> -->
+  <item id="35">
+    <ingredient id="57" count="5000000"/>
+    <production id="4556" count="10"/>
+  </item>
+
+  <!-- Greater Dye of CON <Con+1 Str-1> -->
+  <item id="36">
+    <ingredient id="57" count="5000000"/>
+    <production id="4555" count="10"/>
+  </item>
+
+  <!-- Greater Dye of DEX <Dex+1 Con-1> -->
+  <item id="37">
+    <ingredient id="57" count="5000000"/>
+    <production id="4558" count="10"/>
+  </item>
+
+  <!-- Greater Dye of DEX <Dex+1 Str-1> -->
+  <item id="38">
+    <ingredient id="57" count="5000000"/>
+    <production id="4557" count="10"/>
+  </item>
+
+  <!-- Greater Dye of INT <Int+1 Men-1> -->
+  <item id="39">
+    <ingredient id="57" count="5000000"/>
+    <production id="4559" count="10"/>
+  </item>
+
+  <!-- Greater Dye of INT <Int+1 Wit-1> -->
+  <item id="40">
+    <ingredient id="57" count="5000000"/>
+    <production id="4560" count="10"/>
+  </item>
+
+  <!-- Greater Dye of MEN <Men+1 Int-1> -->
+  <item id="41">
+    <ingredient id="57" count="5000000"/>
+    <production id="4561" count="10"/>
+  </item>
+
+  <!-- Greater Dye of MEN <Men+1 Wit-1> -->
+  <item id="42">
+    <ingredient id="57" count="5000000"/>
+    <production id="4562" count="10"/>
+  </item>
+
+  <!-- Greater Dye of STR <Str+1 Con-1> -->
+  <item id="43">
+    <ingredient id="57" count="5000000"/>
+    <production id="4553" count="10"/>
+  </item>
+
+  <!-- Greater Dye of STR <Str+1 Dex-1> -->
+  <item id="44">
+    <ingredient id="57" count="5000000"/>
+    <production id="4554" count="10"/>
+  </item>
+
+  <!-- Greater Dye of WIT <Wit+1 Int-1> -->
+  <item id="45">
+    <ingredient id="57" count="5000000"/>
+    <production id="4563" count="10"/>
+  </item>
+
+  <!-- Greater Dye of WIT <Wit+1 Men-1> -->
+  <item id="46">
+    <ingredient id="57" count="5000000"/>
+    <production id="4564" count="10"/>
+  </item>
+  
+  <!-- Crystal: B-Grade -->
+  <item id="47">
+    <ingredient id="57" count="2000000"/>
+    <production id="1460" count="100"/>
+  </item>
+
+  <!-- Crystal: C-Grade -->
+  <item id="48">
+    <ingredient id="57" count="1000000"/>
+    <production id="1459" count="100"/>
+  </item>
+
+  <!-- Crystal: D-Grade -->
+  <item id="49">
+    <ingredient id="57" count="500000"/>
+    <production id="1458" count="100"/>
+  </item>
+</list>

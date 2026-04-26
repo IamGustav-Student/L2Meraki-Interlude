@@ -29,16 +29,16 @@
 	<enchant id="6578" targetGrade="S" maxEnchant="16" />
 
 	<!-- Crystal Scrolls: Enchant Weapon -->
-	<enchant id="731" targetGrade="A" bonusRate="100" />
-	<enchant id="949" targetGrade="B" bonusRate="100" />
-	<enchant id="953" targetGrade="C" bonusRate="100" />
-	<enchant id="957" targetGrade="D" bonusRate="100" />
-	<enchant id="961" targetGrade="S" bonusRate="100" />
+	<enchant id="731" targetGrade="A" bonusRate="1" />
+	<enchant id="949" targetGrade="B" bonusRate="1" />
+	<enchant id="953" targetGrade="C" bonusRate="1" />
+	<enchant id="957" targetGrade="D" bonusRate="1" />
+	<enchant id="961" targetGrade="S" bonusRate="1" />
 
 	<!-- Crystal Scrolls: Enchant Armor -->
-	<enchant id="732" targetGrade="A" bonusRate="100" />
-	<enchant id="950" targetGrade="B" bonusRate="100" />
-	<enchant id="954" targetGrade="C" bonusRate="100" />
-	<enchant id="958" targetGrade="D" bonusRate="100" />
-	<enchant id="962" targetGrade="S" bonusRate="100" />
+	<enchant id="732" targetGrade="A" bonusRate="1" />
+	<enchant id="950" targetGrade="B" bonusRate="1" />
+	<enchant id="954" targetGrade="C" bonusRate="1" />
+	<enchant id="958" targetGrade="D" bonusRate="1" />
+	<enchant id="962" targetGrade="S" bonusRate="1" />
 </list>

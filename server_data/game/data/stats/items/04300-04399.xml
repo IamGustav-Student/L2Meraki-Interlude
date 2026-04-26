@@ -663,7 +663,7 @@
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4358" type="EtcItem" name="Bloody Pa'agrio">
+	<item id="4358" type="EtcItem" name="Meraki Event">
 		<!-- Special Coin -->
 		<set name="icon" val="icon.etc_magic_coin_blood_i02" />
 		<set name="immediate_effect" val="true" />
