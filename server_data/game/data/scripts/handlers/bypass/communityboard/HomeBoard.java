@@ -26,7 +26,9 @@ import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import java.util.function.BiPredicate;
@@ -38,6 +40,7 @@ import org.l2jmobius.gameserver.cache.HtmCache;
 import org.l2jmobius.gameserver.config.custom.CommunityBoardConfig;
 import org.l2jmobius.gameserver.config.custom.PremiumSystemConfig;
 import org.l2jmobius.gameserver.data.sql.ClanTable;
+import org.l2jmobius.gameserver.data.SchemeBufferTable;
 import org.l2jmobius.gameserver.data.xml.ExperienceData;
 import org.l2jmobius.gameserver.data.xml.MultisellData;
 import org.l2jmobius.gameserver.data.xml.SkillData;
@@ -49,11 +52,14 @@ import org.l2jmobius.gameserver.model.actor.Creature;
 import org.l2jmobius.gameserver.model.actor.Player;
 import org.l2jmobius.gameserver.model.actor.Summon;
 import org.l2jmobius.gameserver.model.item.enums.ItemProcessType;
+import org.l2jmobius.gameserver.model.item.instance.Item;
+import org.l2jmobius.gameserver.model.item.type.CrystalType;
 import org.l2jmobius.gameserver.model.skill.Skill;
 import org.l2jmobius.gameserver.model.zone.ZoneId;
 import org.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2jmobius.gameserver.network.serverpackets.SellList;
 import org.l2jmobius.gameserver.network.serverpackets.ShowBoard;
+
 
 /**
  * Home board.
@@ -73,7 +79,7 @@ public class HomeBoard implements IParseBoardHandler
 	
 	private static final String[] CUSTOM_COMMANDS =
 	{
-		PremiumSystemConfig.PREMIUM_SYSTEM_ENABLED && CommunityBoardConfig.COMMUNITY_PREMIUM_SYSTEM_ENABLED ? "_bbspremium" : null,
+		"_bbspremium",
 		CommunityBoardConfig.COMMUNITYBOARD_ENABLE_MULTISELLS ? "_bbsexcmultisell" : null,
 		CommunityBoardConfig.COMMUNITYBOARD_ENABLE_MULTISELLS ? "_bbsmultisell" : null,
 		CommunityBoardConfig.COMMUNITYBOARD_ENABLE_MULTISELLS ? "_bbssell" : null,
@@ -180,9 +186,80 @@ public class HomeBoard implements IParseBoardHandler
 		}
 		else if (command.startsWith("_bbssell"))
 		{
-			final String page = command.replace("_bbssell;", "");
-			returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/" + page + ".html");
-			ThreadPool.schedule(() -> player.sendPacket(new SellList(player)), 100);
+			final String[] args = command.split(";");
+			final String page = args[1];
+			
+			// Si hay un tercer argumento, es el objectId de un item para reciclar
+			if (args.length > 2)
+			{
+				try
+				{
+					int objectId = Integer.parseInt(args[2]);
+					Item item = player.getInventory().getItemByObjectId(objectId);
+					if (item != null && !item.isEquipped() && item.isSellable() && !item.isQuestItem())
+					{
+						CrystalType crystalType = item.getTemplate().getCrystalType();
+						if (crystalType != CrystalType.NONE)
+						{
+							// Devolvemos cristales si es equipamiento con grado
+							int crystalId = crystalType.getCrystalId();
+							int crystalCount = item.getTemplate().getCrystalCount(item.getEnchantLevel());
+							player.destroyItem(ItemProcessType.FEE, item, player, true);
+							player.addItem(ItemProcessType.FEE, crystalId, crystalCount, player, true);
+							player.sendMessage("Has reciclado " + item.getTemplate().getName() + " y recibiste " + crystalCount + " cristales.");
+						}
+						else
+						{
+							// Devolvemos Adena (50% del precio de referencia)
+							long price = item.getTemplate().getReferencePrice() / 2;
+							if (price <= 0) price = 1; // Precio minimo
+							long totalAdena = price * item.getCount();
+							player.destroyItem(ItemProcessType.FEE, item, player, true);
+							player.addAdena(ItemProcessType.FEE, (int) totalAdena, player, true);
+							player.sendMessage("Has vendido " + item.getTemplate().getName() + " por " + totalAdena + " Adena.");
+						}
+					}
+				}
+				catch (Exception e)
+				{
+					// Error silencioso o log
+				}
+			}
+
+			// Generamos el HTML del listado de reciclaje
+			String html = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/merchant/recycle.html");
+			StringBuilder itemsHtml = new StringBuilder();
+			int count = 0;
+			for (Item item : player.getInventory().getItems())
+			{
+				if (item.isEquipped() || item.isQuestItem() || !item.isSellable() || item.getTemplate().getReferencePrice() <= 0)
+				{
+					continue;
+				}
+				
+				String icon = item.getTemplate().getIcon();
+				if (icon == null || icon.isEmpty()) icon = "icon.etc_question_mark_i00";
+				
+				long price = item.getTemplate().getReferencePrice() / 2;
+				if (price <= 0) price = 1;
+				
+				String valueStr = (item.getTemplate().getCrystalType() != CrystalType.NONE) ? "Cristales" : (price * item.getCount()) + " A.";
+				
+				itemsHtml.append("<tr>");
+				itemsHtml.append("<td width=40><img src=\"").append(icon).append("\" width=32 height=32></td>");
+				itemsHtml.append("<td width=300><font color=\"FFFFFF\">").append(item.getTemplate().getName()).append(item.getEnchantLevel() > 0 ? " +"+item.getEnchantLevel() : "").append("</font></td>");
+				itemsHtml.append("<td width=80><center>").append(valueStr).append("</center></td>");
+				itemsHtml.append("<td width=80><center><button value=\"Reciclar\" action=\"bypass _bbssell;").append(page).append(";").append(item.getObjectId()).append("\" width=75 height=21 back=\"L2UI_CH3.Btn_BF_Down\" fore=\"L2UI_CH3.Btn_BF\"></center></td>");
+				itemsHtml.append("</tr>");
+				count++;
+			}
+			
+			if (count == 0)
+			{
+				itemsHtml.append("<tr><td colspan=4><center><br><br><font color=\"AAAAAA\">No tienes items para reciclar en tu inventario.</font></center></td></tr>");
+			}
+			
+			returnHtml = html.replace("%recycle_items%", itemsHtml.toString());
 		}
 		else if (command.startsWith("_bbsteleport"))
 		{
@@ -223,29 +300,189 @@ public class HomeBoard implements IParseBoardHandler
 					targets.add(pet);
 				}
 				
-				for (int i = 0; i < buffCount; i++)
+				if (buypassOptions[0].equalsIgnoreCase("category"))
 				{
-					final Skill skill = SkillData.getInstance().getSkill(Integer.parseInt(buypassOptions[i].split(",")[0]), Integer.parseInt(buypassOptions[i].split(",")[1]));
-					if (!CommunityBoardConfig.COMMUNITY_AVAILABLE_BUFFS.contains(skill.getId()))
+					final String category = buypassOptions[1];
+					final List<Integer> skillIds = SchemeBufferTable.getInstance().getSkillsIdsByType(category);
+					if (!skillIds.isEmpty())
 					{
-						continue;
-					}
-					
-					for (Creature target : targets)
-					{
-						skill.applyEffects(player, target);
-						if (CommunityBoardConfig.COMMUNITYBOARD_CAST_ANIMATIONS)
+						for (int skillId : skillIds)
 						{
-							player.sendPacket(new MagicSkillUse(player, target, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
+							int maxLevel = SkillData.getInstance().getMaxLevel(skillId);
+							int skillLevel = 1;
+							if (player.hasPremiumStatus() && (maxLevel >= 2))
+							{
+								skillLevel = 2;
+							}
+							else if (maxLevel < 1)
+							{
+								continue;
+							}
 							
-							// not recommend broadcast
-							// player.broadcastPacket(new MagicSkillUse(player, target, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
+							final Skill skill = SkillData.getInstance().getSkill(skillId, Math.min(skillLevel, maxLevel));
+							if ((skill != null) && CommunityBoardConfig.COMMUNITY_AVAILABLE_BUFFS.contains(skill.getId()))
+							{
+								for (Creature target : targets)
+								{
+									skill.applyEffects(player, target);
+								}
+							}
+						}
+						player.sendMessage("Has recibido los buffs de la categoria: " + category);
+					}
+					returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/" + buypassOptions[2] + ".html");
+				}
+				else if (buypassOptions[0].equalsIgnoreCase("category_view"))
+				{
+					final String category = buypassOptions[1];
+					returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/buffer/category.html");
+					
+					final List<Integer> skillIds = SchemeBufferTable.getInstance().getSkillsIdsByType(category);
+					final StringBuilder sb = new StringBuilder();
+					sb.append("<table width=450>");
+					int count = 0;
+					for (int skillId : skillIds)
+					{
+						if (count % 6 == 0) sb.append("<tr>");
+						
+						String iconId = String.format("%04d", skillId);
+						
+						sb.append("<td align=center width=75 height=45>");
+						sb.append("<table border=0 cellspacing=0 cellpadding=0 bgcolor=333333><tr><td>");
+						sb.append("<button value=\" \" action=\"bypass _bbsbuff;" + skillId + ",2;buffer/category;category_view;" + category + "\" width=32 height=32 back=\"icon.skill" + iconId + "\" fore=\"icon.skill" + iconId + "\">");
+						sb.append("</td></tr></table>");
+						sb.append("</td>");
+						
+						count++;
+						if (count % 6 == 0) sb.append("</tr>");
+					}
+					if (count % 6 != 0) sb.append("</tr>");
+					sb.append("</table>");
+					
+					returnHtml = returnHtml.replace("%buffer_skills%", sb.toString());
+					returnHtml = returnHtml.replace("%category_name%", category);
+				}
+				else if (buypassOptions[0].equalsIgnoreCase("scheme"))
+				{
+					final String action = buypassOptions[1];
+					final String schemeName = buypassOptions.length > 2 ? buypassOptions[2] : "";
+					final String returnPage = buypassOptions.length > 3 ? buypassOptions[3] : "buffer/main";
+					
+					if (action.equalsIgnoreCase("load"))
+					{
+						final List<Integer> skillIds = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
+						if (!skillIds.isEmpty())
+						{
+							for (int skillId : skillIds)
+							{
+								int maxLevel = SkillData.getInstance().getMaxLevel(skillId);
+								int skillLevel = (player.hasPremiumStatus() && (maxLevel >= 2)) ? 2 : 1;
+								final Skill skill = SkillData.getInstance().getSkill(skillId, Math.min(skillLevel, maxLevel));
+								if (skill != null)
+								{
+									for (Creature target : targets)
+									{
+										skill.applyEffects(player, target);
+									}
+								}
+							}
+							player.sendMessage("Perfil '" + schemeName + "' cargado correctamente.");
+						}
+						else
+						{
+							player.sendMessage("El perfil '" + schemeName + "' no existe o esta vacio.");
 						}
 					}
+					else if (action.equalsIgnoreCase("save"))
+					{
+						final List<Integer> skillIds = new ArrayList<>();
+						player.getEffectList().getEffects().forEach(effect -> {
+							int id = effect.getSkill().getId();
+							if (CommunityBoardConfig.COMMUNITY_AVAILABLE_BUFFS.contains(id))
+							{
+								if (!skillIds.contains(id))
+								{
+									skillIds.add(id);
+								}
+							}
+						});
+						
+						if (skillIds.isEmpty())
+						{
+							player.sendMessage("No tienes buffs activos para guardar.");
+						}
+						else if (schemeName.isEmpty())
+						{
+							player.sendMessage("Debes especificar un nombre para el perfil.");
+						}
+						else
+						{
+							SchemeBufferTable.getInstance().setScheme(player.getObjectId(), schemeName, skillIds);
+							player.sendMessage("Perfil '" + schemeName + "' guardado.");
+							// Force DB save
+							SchemeBufferTable.getInstance().saveSchemes();
+						}
+					}
+					else if (action.equalsIgnoreCase("delete"))
+					{
+						if (SchemeBufferTable.getInstance().deleteScheme(player.getObjectId(), schemeName))
+						{
+							player.sendMessage("Perfil '" + schemeName + "' eliminado.");
+							// Force DB save
+							SchemeBufferTable.getInstance().saveSchemes();
+						}
+						else
+						{
+							player.sendMessage("No se pudo eliminar el perfil.");
+						}
+					}
+					returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/" + returnPage + ".html");
+				}
+				else
+				{
+					for (int i = 0; i < buffCount; i++)
+					{
+						final String opt = buypassOptions[i];
+						if (!opt.contains(","))
+						{
+							continue;
+						}
+						
+						final String[] skillOptions = opt.split(",");
+						final int skillId;
+						try
+						{
+							skillId = Integer.parseInt(skillOptions[0]);
+						}
+						catch (Exception e)
+						{
+							continue;
+						}
+						
+						int maxLevel = SkillData.getInstance().getMaxLevel(skillId);
+						int skillLevel = Integer.parseInt(skillOptions[1]);
+						
+						if (!player.hasPremiumStatus())
+						{
+							skillLevel = 1;
+						}
+						
+						final Skill skill = SkillData.getInstance().getSkill(skillId, Math.min(skillLevel, maxLevel));
+						if ((skill != null) && CommunityBoardConfig.COMMUNITY_AVAILABLE_BUFFS.contains(skill.getId()))
+						{
+							for (Creature target : targets)
+							{
+								skill.applyEffects(player, target);
+								if (CommunityBoardConfig.COMMUNITYBOARD_CAST_ANIMATIONS)
+								{
+									player.sendPacket(new MagicSkillUse(player, target, skill.getId(), skill.getLevel(), skill.getHitTime(), skill.getReuseDelay()));
+								}
+							}
+						}
+					}
+					returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/" + page + ".html");
 				}
 			}
-			
-			returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/" + page + ".html");
 		}
 		else if (command.startsWith("_bbsheal"))
 		{
@@ -301,13 +538,38 @@ public class HomeBoard implements IParseBoardHandler
 			final String fullBypass = command.replace("_bbspremium;", "");
 			final String[] buypassOptions = fullBypass.split(",");
 			final int premiumDays = Integer.parseInt(buypassOptions[0]);
-			if ((premiumDays < 1) || (premiumDays > 30) || (player.getInventory().getInventoryItemCount(CommunityBoardConfig.COMMUNITY_PREMIUM_COIN_ID, -1) < (CommunityBoardConfig.COMMUNITY_PREMIUM_PRICE_PER_DAY * premiumDays)))
+			int price = 0;
+			switch (premiumDays)
+			{
+				case 1:
+				{
+					price = 100;
+					break;
+				}
+				case 15:
+				{
+					price = 650;
+					break;
+				}
+				case 30:
+				{
+					price = 1000;
+					break;
+				}
+				default:
+				{
+					price = CommunityBoardConfig.COMMUNITY_PREMIUM_PRICE_PER_DAY * premiumDays;
+					break;
+				}
+			}
+			
+			if ((premiumDays < 1) || (premiumDays > 30) || (player.getInventory().getInventoryItemCount(CommunityBoardConfig.COMMUNITY_PREMIUM_COIN_ID, -1) < price))
 			{
 				player.sendMessage("Not enough currency!");
 			}
 			else
 			{
-				player.destroyItemByItemId(ItemProcessType.FEE, CommunityBoardConfig.COMMUNITY_PREMIUM_COIN_ID, CommunityBoardConfig.COMMUNITY_PREMIUM_PRICE_PER_DAY * premiumDays, player, true);
+				player.destroyItemByItemId(ItemProcessType.FEE, CommunityBoardConfig.COMMUNITY_PREMIUM_COIN_ID, price, player, true);
 				PremiumManager.getInstance().addPremiumTime(player.getAccountName(), premiumDays, TimeUnit.DAYS);
 				player.sendMessage("Your account will now have premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumExpiration(player.getAccountName())) + ".");
 				if (PremiumSystemConfig.PC_CAFE_RETAIL_LIKE)
@@ -324,6 +586,30 @@ public class HomeBoard implements IParseBoardHandler
 			if (CommunityBoardConfig.CUSTOM_CB_ENABLED)
 			{
 				returnHtml = returnHtml.replace("%navigation%", navigation);
+			}
+			
+			if (returnHtml.contains("%buffer_schemes%"))
+			{
+				final StringBuilder sb = new StringBuilder();
+				final Map<String, List<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
+				if ((schemes != null) && !schemes.isEmpty())
+				{
+					for (String name : schemes.keySet())
+					{
+						sb.append("<tr>");
+						sb.append("<td width=150 align=center><font color=\"LEVEL\">" + name + "</font></td>");
+						sb.append("<td width=100 align=center><button value=\"Cargar\" action=\"bypass _bbsbuff;scheme;load;" + name + ";buffer/main\" width=80 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+						sb.append("<td width=100 align=center><button value=\"Borrar\" action=\"bypass _bbsbuff;scheme;delete;" + name + ";buffer/main\" width=80 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+						sb.append("</tr>");
+					}
+				}
+				
+				if (sb.length() == 0)
+				{
+					sb.append("<tr><td colspan=3 align=center><font color=\"888888\">No tienes perfiles guardados.</font></td></tr>");
+				}
+				
+				returnHtml = returnHtml.replace("%buffer_schemes%", sb.toString());
 			}
 			
 			CommunityBoardHandler.separateAndSend(returnHtml, player);

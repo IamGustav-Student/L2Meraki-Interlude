@@ -15,7 +15,7 @@
 			</conditions>
 		</classChangeOption>
 		
-		<classChangeOption>
+		<classChangeOption name="30,000,000 Adena">
 			<appliesTo>
 				<category>THIRD_CLASS_GROUP</category>
 			</appliesTo>

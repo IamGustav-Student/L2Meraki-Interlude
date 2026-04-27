@@ -3,18 +3,24 @@
 	<npcs>
 		<npc>-1</npc>
 	</npcs>
-	<!-- JEWELS GRADE D (100k) -->
-	<item><ingredient count="100000" id="57" /><production count="1" id="916" /></item> <!-- Necklace of Devotion -->
-	<item><ingredient count="70000" id="57" /><production count="1" id="844" /></item> <!-- Earring of Devotion -->
-	<item><ingredient count="50000" id="57" /><production count="1" id="877" /></item> <!-- Ring of Devotion -->
+	
+	<!-- Blessed Jewels set -->
+  <item>
+    <ingredient id="57" count="2500000"/>
+    <production id="919" count="1"/>
+    <production id="857" count="1"/>
+    <production id="857" count="1"/>
+    <production id="888" count="1"/>
+    <production id="888" count="1"/>
+  </item>
 
-	<!-- JEWELS GRADE C (500k) -->
-	<item><ingredient count="500000" id="57" /><production count="1" id="924" /></item> <!-- Blessed Necklace -->
-	<item><ingredient count="350000" id="57" /><production count="1" id="853" /></item> <!-- Blessed Earring -->
-	<item><ingredient count="250000" id="57" /><production count="1" id="885" /></item> <!-- Blessed Ring -->
-
-	<!-- JEWELS GRADE B (2M) -->
-	<item><ingredient count="2000000" id="57" /><production count="1" id="941" /></item> <!-- Black Ore Necklace -->
-	<item><ingredient count="1400000" id="57" /><production count="1" id="879" /></item> <!-- Black Ore Earring -->
-	<item><ingredient count="1000000" id="57" /><production count="1" id="910" /></item> <!-- Black Ore Ring -->
+  <!-- Black ore Jewels set -->
+  <item>
+    <ingredient id="57" count="5000000"/>
+    <production id="926" count="1"/>
+    <production id="895" count="1"/>
+    <production id="895" count="1"/>
+    <production id="864" count="1"/>
+    <production id="864" count="1"/>
+  </item>
 </list>

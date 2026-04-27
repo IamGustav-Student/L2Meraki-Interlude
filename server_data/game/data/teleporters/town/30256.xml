@@ -3,10 +3,30 @@
 	<npc id="30256"> <!-- Bella -->
 		<teleport type="NORMAL">
 			<location name="Town of Gludin" x="-80826" y="149775" z="-3043" feeCount="18000" />
-			<location name="Obelisk of Victory" x="-106726" y="253018" z="-472" feeCount="600" />
-			<location name="Singing Waterfall" x="-115822" y="233156" z="-3595" feeCount="300" />
-			<location name="Elven Ruins" x="-114674" y="244150" z="-3376" feeCount="500" />
-			<location name="Altar of Rites" x="-96716" y="258703" z="-3321" feeCount="400" />
+			<location name="The Town of Dion" x="18748" y="145437" z="-3132" feeCount="8100" castleId="2" />
+			<location name="The Town of Giran" x="83336" y="147972" z="-3404" feeCount="24000" castleId="3" />
+			<location name="Heine" x="111455" y="219400" z="-3546" feeCount="37000" castleId="6" />
+			<location name="Elven Village" x="45475" y="48359"  z="-3059" feeCount="13000" />
+			<location name="Dark Elf Village" x="9716" y="15502"  z="-4500" feeCount="13000" />
+			<location name="Orc Village" x="-45186" y="-112459" z="-236" feeCount="23000" />
+			<location name="Dwarven Village" x="115120" y="-178112" z="-916" feeCount="23000" />
+			<location name="Talking Island Village" x="-84141" y="244623" z="-3729" feeCount="18000" />
+			<location name="Ruins of Despair" x="-19363" y="141974" z="-3662" feeCount="600" />
+			<location name="Ruins of Agony" x="-21262" y="126938" z="-3728" feeCount="400" />
+			<location name="Forgotten Temple" x="-39031" y="187063" z="-3482" feeCount="1700" />
+			<location name="Maille Lizardmen Barracks" x="-18873" y="101758" z="-3648" feeCount="610" />
+		</teleport>
+		<teleport type="NOBLES_TOKEN">
+			<location name="Gludin Arena" x="-87328" y="142266" z="-3640" feeId="6651" feeCount="1" />
+			<location name="Giran Arena" x="73579" y="142709" z="-3768" feeId="6651" feeCount="1" />
+			<location name="The Center of the Neutral Zone" x="-10612" y="75881" z="-3592" feeId="6651" feeCount="1" />
+			<location name="Coliseum" x="146440" y="46723" z="-3400" feeId="6651" feeCount="1" />
+		</teleport>
+		<teleport type="NOBLES_ADENA">
+			<location name="Gludin Arena" x="-87328" y="142266" z="-3640" feeCount="1000" />
+			<location name="Giran Arena" x="73579" y="142709" z="-3768" feeCount="1000" />
+			<location name="The Center of the Neutral Zone" x="-10612" y="75881" z="-3592" feeCount="1000" />
+			<location name="Coliseum" x="146440" y="46723" z="-3400" feeCount="1000" />
 		</teleport>
 	</npc>
 </list>

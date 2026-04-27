@@ -11,7 +11,7 @@ import org.l2jmobius.gameserver.model.script.Script;
 public class GlobalGK extends Script
 {
 	// NPCs registrados (Bella y Fiorella para la prueba)
-	private static final int[] GK_IDS = {30256, 50009};
+	private static final int[] GK_IDS = {50009};
 	
 	public GlobalGK()
 	{

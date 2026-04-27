@@ -3,18 +3,21 @@
 <!-- Created with Lineage II - Multisell Manager -->
 <!--  by Stev0 -->
 
-<list maintainEnchantment="true">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<npcs>
+		<npc>-1</npc>
+	</npcs>
 
 
 
   <!-- Quest item Noble-->
-  <item id="2">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="7681" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="3">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="7682" count="1"/>
   </item>
@@ -22,19 +25,19 @@
 
 
   <!-- Quest item Noble-->
-  <item id="5">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="7695" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="6">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="7696" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="7">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="7836" count="1"/>
   </item>
@@ -44,73 +47,73 @@
 
 
   <!-- Quest item Noble-->
-  <item id="10">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="6843" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="11">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="6844" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="12">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="6845" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="13">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="6846" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="14">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="7059" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="15">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8177" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="16">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8178" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="17">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8179" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="18">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8180" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="19">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8184" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="20">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8185" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="21">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8186" count="1"/>
   </item>
@@ -118,13 +121,13 @@
 
 
   <!-- Quest item Noble-->
-  <item id="23">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8188" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="24">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8189" count="1"/>
   </item>
@@ -133,62 +136,62 @@
 
 
   <!-- Quest item Noble-->
-  <item id="28">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8557" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="29">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8558" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="30">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8559" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="31">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8560" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="32">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8561" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="33">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8562" count="1"/>
   </item>
 
 
   <!-- Quest item Noble-->
-  <item id="35">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8564" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="36">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8565" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="37">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8566" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="38">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8567" count="1"/>
   </item>
@@ -196,73 +199,73 @@
 
 
   <!-- Quest item Noble-->
-  <item id="40">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8569" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="41">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8660" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="42">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8661" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="43">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8912" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="44">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8913" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="45">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8914" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="46">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8915" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="47">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8916" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="48">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8917" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="49">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8918" count="1"/>
   </item>
 
     <!-- Quest item Noble-->
-  <item id="50">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8920" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="51">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8921" count="1"/>
   </item>
@@ -270,27 +273,21 @@
 
 
   <!-- Quest item Noble-->
-  <item id="53">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8923" count="1"/>
   </item>
 
 
     <!-- Quest item Noble-->
-  <item id="54">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8936" count="1"/>
   </item>
 
   <!-- Quest item Noble-->
-  <item id="55">
+  <item>
     <ingredient id="57" count="5000000"/>
     <production id="8912" count="1"/>
   </item>
-  
-  
-  
-	<npcs>
-		<npc>-1</npc>
-	</npcs>
 </list>

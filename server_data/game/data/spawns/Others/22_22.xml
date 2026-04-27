@@ -2,6 +2,5 @@
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="22_22">
 		<npc id="353535" x="83679" y="147990" z="-3431" heading="38404" respawnDelay="60" /> <!-- Meraki Store - GM Shop -->
-		<npc id="29047" x="82729" y="148970" z="-3495" heading="50516" respawnDelay="60" /> <!-- Scarlet van Halisha -->
 	</spawn>
 </list>

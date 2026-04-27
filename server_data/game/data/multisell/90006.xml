@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/multisell.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
 	<npcs>
 		<npc>-1</npc><npc>50009</npc></npcs>
-	<item id="1">
+	<item>
 		<ingredient id="3434" count="1000" />
 		<production id="8546" count="1" />
 	</item>
-	<item id="2">
+	<item>
 		<ingredient id="3434" count="5000" />
 		<production id="6622" count="1" />
 	</item>

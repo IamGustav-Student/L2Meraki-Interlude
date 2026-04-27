@@ -92,15 +92,11 @@
 				<group chance="20">
 					<item id="955" min="1" max="3" chance="100" /> <!-- Scroll: Enchant Weapon (Grade D) -->
 				</group>
-			</drop>
-			<drop chance="40">
-				<group chance="50">
-					<item id="961" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Weapon (S) -->
-					<item id="962" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Armor (S) -->
-				</group>
-				<group chance="50">
-					<item id="731" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Weapon (A) -->
-					<item id="732" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Armor (A) -->
+			<group chance="40">
+					<item id="961" min="1" max="3" chance="50" />
+					<item id="962" min="1" max="3" chance="50" />
+					<item id="731" min="1" max="3" chance="50" />
+					<item id="732" min="1" max="3" chance="50" />
 				</group>
 			</drop>
 		</dropLists>
@@ -323,15 +319,11 @@
 				<group chance="33.3333">
 					<item id="8755" min="1" max="1" chance="100" /> <!-- Top-Grade Life Stone: level 52 -->
 				</group>
-			</drop>
-			<drop chance="40">
-				<group chance="50">
-					<item id="961" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Weapon (S) -->
-					<item id="962" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Armor (S) -->
-				</group>
-				<group chance="50">
-					<item id="731" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Weapon (A) -->
-					<item id="732" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Armor (A) -->
+			<group chance="40">
+					<item id="961" min="1" max="3" chance="50" />
+					<item id="962" min="1" max="3" chance="50" />
+					<item id="731" min="1" max="3" chance="50" />
+					<item id="732" min="1" max="3" chance="50" />
 				</group>
 			</drop>
 		</dropLists>
@@ -690,15 +682,11 @@
 					<item id="8745" min="2" max="4" chance="50" /> <!-- High-Grade Life Stone: level 52 -->
 					<item id="8755" min="1" max="2" chance="25" /> <!-- Top-Grade Life Stone: level 52 -->
 				</group>
-			</drop>
-			<drop chance="40">
-				<group chance="50">
-					<item id="961" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Weapon (S) -->
-					<item id="962" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Armor (S) -->
-				</group>
-				<group chance="50">
-					<item id="731" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Weapon (A) -->
-					<item id="732" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Armor (A) -->
+			<group chance="40">
+					<item id="961" min="1" max="3" chance="50" />
+					<item id="962" min="1" max="3" chance="50" />
+					<item id="731" min="1" max="3" chance="50" />
+					<item id="732" min="1" max="3" chance="50" />
 				</group>
 			</drop>
 		</dropLists>
@@ -1095,8 +1083,8 @@
 					<item id="8751" min="1" max="2" chance="52.9801" /> <!-- High-Grade Life Stone: level 70 -->
 					<item id="8752" min="1" max="2" chance="47.0199" /> <!-- High-Grade Life Stone: level 76 -->
 				</group>
-			</drop>
-			<drop>
+			
+
 				<group chance="100">
 					<item id="961" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Weapon (S) -->
 					<item id="962" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Armor (S) -->
@@ -1243,15 +1231,11 @@
 				<group chance="8">
 					<item id="8758" min="1" max="2" chance="100" /> <!-- Top-Grade Life Stone: level 61 -->
 				</group>
-			</drop>
-			<drop chance="40">
-				<group chance="50">
-					<item id="961" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Weapon (S) -->
-					<item id="962" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Armor (S) -->
-				</group>
-				<group chance="50">
-					<item id="731" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Weapon (A) -->
-					<item id="732" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Armor (A) -->
+			<group chance="40">
+					<item id="961" min="1" max="3" chance="50" />
+					<item id="962" min="1" max="3" chance="50" />
+					<item id="731" min="1" max="3" chance="50" />
+					<item id="732" min="1" max="3" chance="50" />
 				</group>
 			</drop>
 		</dropLists>
@@ -1646,8 +1630,8 @@
 				<group chance="100">
 					<item id="8620" min="12" max="19" chance="100" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
 				</group>
-			</drop>
-			<drop>
+			
+
 				<group chance="100">
 					<item id="961" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Weapon (S) -->
 					<item id="962" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Armor (S) -->
@@ -2510,15 +2494,11 @@
 				<group chance="11.1111">
 					<item id="8762" min="1" max="2" chance="100" /> <!-- Top-Grade Life Stone: level 76 -->
 				</group>
-			</drop>
-			<drop chance="40">
-				<group chance="50">
-					<item id="961" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Weapon (S) -->
-					<item id="962" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Armor (S) -->
-				</group>
-				<group chance="50">
-					<item id="731" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Weapon (A) -->
-					<item id="732" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Armor (A) -->
+			<group chance="40">
+					<item id="961" min="1" max="3" chance="50" />
+					<item id="962" min="1" max="3" chance="50" />
+					<item id="731" min="1" max="3" chance="50" />
+					<item id="732" min="1" max="3" chance="50" />
 				</group>
 			</drop>
 		</dropLists>
@@ -3857,8 +3837,8 @@
 				<group chance="100">
 					<item id="8620" min="12" max="29" chance="148.76" /> <!-- Ancient Book - Divine Inspiration (Manuscript) -->
 				</group>
-			</drop>
-			<drop>
+			
+
 				<group chance="100">
 					<item id="961" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Weapon (S) -->
 					<item id="962" min="1" max="3" chance="50" /> <!-- Crystal Scroll: Enchant Armor (S) -->
