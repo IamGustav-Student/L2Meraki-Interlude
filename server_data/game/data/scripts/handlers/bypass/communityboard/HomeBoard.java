@@ -33,6 +33,7 @@ import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
+import java.util.logging.Logger;
 
 import org.l2jmobius.commons.database.DatabaseFactory;
 import org.l2jmobius.commons.threads.ThreadPool;
@@ -67,6 +68,8 @@ import org.l2jmobius.gameserver.network.serverpackets.ShowBoard;
  */
 public class HomeBoard implements IParseBoardHandler
 {
+	private static final Logger LOGGER = Logger.getLogger(HomeBoard.class.getName());
+	
 	// SQL Queries
 	private static final String COUNT_FAVORITES = "SELECT COUNT(*) AS favorites FROM `bbs_favorites` WHERE `playerId`=?";
 	private static final String NAVIGATION_PATH = "data/html/CommunityBoard/Custom/navigation.html";
@@ -302,19 +305,20 @@ public class HomeBoard implements IParseBoardHandler
 				
 				if (buypassOptions[0].equalsIgnoreCase("category"))
 				{
-					final String category = buypassOptions[1];
+					String category = buypassOptions[1];
+					// Normalización de categorías
+					if (category.equalsIgnoreCase("Danza") || category.equalsIgnoreCase("Danzas")) category = "Dances";
+					if (category.equalsIgnoreCase("Canto") || category.equalsIgnoreCase("Cantos")) category = "Songs";
+					
 					final List<Integer> skillIds = SchemeBufferTable.getInstance().getSkillsIdsByType(category);
 					if (!skillIds.isEmpty())
 					{
 						for (int skillId : skillIds)
 						{
 							int maxLevel = SkillData.getInstance().getMaxLevel(skillId);
-							int skillLevel = 1;
-							if (player.hasPremiumStatus() && (maxLevel >= 2))
-							{
-								skillLevel = 2;
-							}
-							else if (maxLevel < 1)
+							int skillLevel = player.hasPremiumStatus() ? maxLevel : 1;
+							
+							if (maxLevel < 1)
 							{
 								continue;
 							}
@@ -334,7 +338,11 @@ public class HomeBoard implements IParseBoardHandler
 				}
 				else if (buypassOptions[0].equalsIgnoreCase("category_view"))
 				{
-					final String category = buypassOptions[1];
+					String category = buypassOptions[1];
+					// Normalización de categorías
+					if (category.equalsIgnoreCase("Danza") || category.equalsIgnoreCase("Danzas")) category = "Dances";
+					if (category.equalsIgnoreCase("Canto") || category.equalsIgnoreCase("Cantos")) category = "Songs";
+					
 					returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/buffer/category.html");
 					
 					final List<Integer> skillIds = SchemeBufferTable.getInstance().getSkillsIdsByType(category);
@@ -361,12 +369,27 @@ public class HomeBoard implements IParseBoardHandler
 					
 					returnHtml = returnHtml.replace("%buffer_skills%", sb.toString());
 					returnHtml = returnHtml.replace("%category_name%", category);
+					
+					// Soporte para edición de esquemas
+					if (buypassOptions.length > 4 && buypassOptions[2].equalsIgnoreCase("scheme") && buypassOptions[3].equalsIgnoreCase("edit"))
+					{
+						final String schemeName = buypassOptions[4];
+						returnHtml = returnHtml.replace("bypass _bbsbuff;", "bypass _bbsbuff;scheme;add;" + schemeName + ";");
+					}
 				}
 				else if (buypassOptions[0].equalsIgnoreCase("scheme"))
 				{
 					final String action = buypassOptions[1];
 					final String schemeName = buypassOptions.length > 2 ? buypassOptions[2] : "";
 					final String returnPage = buypassOptions.length > 3 ? buypassOptions[3] : "buffer/main";
+					
+					if (schemeName.isEmpty() || schemeName.equalsIgnoreCase("$s_name"))
+					{
+						if (!action.equalsIgnoreCase("save")) // Solo ignoramos si no es save, ya que save tiene su propio mensaje
+						{
+							return onCommand("_bbsbuff;buffer/main", player);
+						}
+					}
 					
 					if (action.equalsIgnoreCase("load"))
 					{
@@ -376,7 +399,7 @@ public class HomeBoard implements IParseBoardHandler
 							for (int skillId : skillIds)
 							{
 								int maxLevel = SkillData.getInstance().getMaxLevel(skillId);
-								int skillLevel = (player.hasPremiumStatus() && (maxLevel >= 2)) ? 2 : 1;
+								int skillLevel = player.hasPremiumStatus() ? maxLevel : 1;
 								final Skill skill = SkillData.getInstance().getSkill(skillId, Math.min(skillLevel, maxLevel));
 								if (skill != null)
 								{
@@ -396,7 +419,8 @@ public class HomeBoard implements IParseBoardHandler
 					else if (action.equalsIgnoreCase("save"))
 					{
 						final List<Integer> skillIds = new ArrayList<>();
-						player.getEffectList().getEffects().forEach(effect -> {
+						player.getEffectList().getEffects().forEach(effect ->
+						{
 							int id = effect.getSkill().getId();
 							if (CommunityBoardConfig.COMMUNITY_AVAILABLE_BUFFS.contains(id))
 							{
@@ -411,32 +435,100 @@ public class HomeBoard implements IParseBoardHandler
 						{
 							player.sendMessage("No tienes buffs activos para guardar.");
 						}
-						else if (schemeName.isEmpty())
+						else if (schemeName.isEmpty() || schemeName.equalsIgnoreCase("$s_name"))
 						{
-							player.sendMessage("Debes especificar un nombre para el perfil.");
+							player.sendMessage("Debes introducir un nombre valido para el perfil.");
 						}
 						else
 						{
 							SchemeBufferTable.getInstance().setScheme(player.getObjectId(), schemeName, skillIds);
-							player.sendMessage("Perfil '" + schemeName + "' guardado.");
-							// Force DB save
-							SchemeBufferTable.getInstance().saveSchemes();
+							player.sendMessage("Perfil '" + schemeName + "' guardado con tus buffs actuales.");
 						}
 					}
 					else if (action.equalsIgnoreCase("delete"))
 					{
-						if (SchemeBufferTable.getInstance().deleteScheme(player.getObjectId(), schemeName))
+						if (!schemeName.isEmpty())
 						{
-							player.sendMessage("Perfil '" + schemeName + "' eliminado.");
-							// Force DB save
-							SchemeBufferTable.getInstance().saveSchemes();
+							SchemeBufferTable.getInstance().setScheme(player.getObjectId(), schemeName, Collections.emptyList());
+							player.sendMessage("Perfil '" + schemeName + "' borrado correctamente.");
+						}
+					}
+					else if (action.equalsIgnoreCase("edit"))
+					{
+						returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/buffer/edit_scheme.html");
+						final List<Integer> skillIds = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
+						final StringBuilder sb = new StringBuilder();
+						if (skillIds.isEmpty())
+						{
+							sb.append("<tr><td colspan=3 align=center><font color=\"888888\">Este perfil no tiene habilidades.</font></td></tr>");
 						}
 						else
 						{
-							player.sendMessage("No se pudo eliminar el perfil.");
+							for (int skillId : skillIds)
+							{
+								final Skill skill = SkillData.getInstance().getSkill(skillId, 1);
+								if (skill != null)
+								{
+									String icon = skill.getIcon();
+									if (icon == null || icon.isEmpty()) icon = "icon.skill0000";
+									sb.append("<tr>");
+									sb.append("<td width=40><img src=\"" + icon + "\" width=32 height=32></td>");
+									sb.append("<td width=200><font color=\"CDB67F\">" + skill.getName() + "</font></td>");
+									sb.append("<td width=80 align=center><button value=\"Quitar\" action=\"bypass _bbsbuff;scheme;remove;" + schemeName + ";" + skillId + "\" width=65 height=20 back=\"L2UI_CH3.Btn_BF_Down\" fore=\"L2UI_CH3.Btn_BF\"></td>");
+									sb.append("</tr>");
+									sb.append("<tr><td height=5></td></tr>");
+								}
+							}
 						}
+						returnHtml = returnHtml.replace("%scheme_name%", schemeName);
+						returnHtml = returnHtml.replace("%scheme_skills%", sb.toString());
 					}
-					returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/" + returnPage + ".html");
+					else if (action.equalsIgnoreCase("add"))
+					{
+						String skillData = buypassOptions[3];
+						if (skillData.contains(","))
+						{
+							skillData = skillData.split(",")[0];
+						}
+						final int skillId = Integer.parseInt(skillData);
+						final List<Integer> skillIds = new ArrayList<>(SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName));
+						if (!skillIds.contains(skillId))
+						{
+							if (skillIds.size() >= 40)
+							{
+								player.sendMessage("Has alcanzado el limite de buffs para este perfil.");
+							}
+							else
+							{
+								skillIds.add(skillId);
+								SchemeBufferTable.getInstance().setScheme(player.getObjectId(), schemeName, skillIds);
+								player.sendMessage("Habilidad añadida al perfil " + schemeName);
+							}
+						}
+						// Volvemos a la edicion
+						return onCommand("_bbsbuff;scheme;edit;" + schemeName, player);
+					}
+					else if (action.equalsIgnoreCase("remove"))
+					{
+						String skillData = buypassOptions[3];
+						if (skillData.contains(","))
+						{
+							skillData = skillData.split(",")[0];
+						}
+						final int skillId = Integer.parseInt(skillData);
+						final List<Integer> skillIds = new ArrayList<>(SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName));
+						if (skillIds.remove(Integer.valueOf(skillId)))
+						{
+							SchemeBufferTable.getInstance().setScheme(player.getObjectId(), schemeName, skillIds);
+							player.sendMessage("Habilidad quitada del perfil " + schemeName);
+						}
+						return onCommand("_bbsbuff;scheme;edit;" + schemeName, player);
+					}
+					
+					if (returnHtml == null)
+					{
+						returnHtml = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/" + returnPage + ".html");
+					}
 				}
 				else
 				{
@@ -594,13 +686,19 @@ public class HomeBoard implements IParseBoardHandler
 				final Map<String, List<Integer>> schemes = SchemeBufferTable.getInstance().getPlayerSchemes(player.getObjectId());
 				if ((schemes != null) && !schemes.isEmpty())
 				{
-					for (String name : schemes.keySet())
+					for (String schemeName : schemes.keySet())
 					{
+						if (schemeName == null || schemeName.isEmpty() || schemeName.equalsIgnoreCase("$s_name"))
+						{
+							continue;
+						}
 						sb.append("<tr>");
-						sb.append("<td width=150 align=center><font color=\"LEVEL\">" + name + "</font></td>");
-						sb.append("<td width=100 align=center><button value=\"Cargar\" action=\"bypass _bbsbuff;scheme;load;" + name + ";buffer/main\" width=80 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-						sb.append("<td width=100 align=center><button value=\"Borrar\" action=\"bypass _bbsbuff;scheme;delete;" + name + ";buffer/main\" width=80 height=25 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+						sb.append("<td width=180 align=left><font color=\"CDB67F\">" + schemeName + "</font></td>");
+						sb.append("<td width=70 align=center><button value=\"Cargar\" action=\"bypass _bbsbuff;scheme;load;" + schemeName + ";buffer/main\" width=65 height=20 back=\"L2UI_CH3.Btn_BF_Down\" fore=\"L2UI_CH3.Btn_BF\"></td>");
+						sb.append("<td width=70 align=center><button value=\"Editar\" action=\"bypass _bbsbuff;scheme;edit;" + schemeName + ";buffer/main\" width=65 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+						sb.append("<td width=70 align=center><button value=\"Borrar\" action=\"bypass _bbsbuff;scheme;delete;" + schemeName + ";buffer/main\" width=65 height=20 back=\"L2UI_CH3.Btn_BF_Down\" fore=\"L2UI_CH3.Btn_BF\"></td>");
 						sb.append("</tr>");
+						sb.append("<tr><td height=5></td></tr>");
 					}
 				}
 				
@@ -640,7 +738,7 @@ public class HomeBoard implements IParseBoardHandler
 		}
 		catch (Exception e)
 		{
-			LOG.warning(FavoriteBoard.class.getSimpleName() + ": Coudn't load favorites count for " + player);
+			LOGGER.warning(FavoriteBoard.class.getSimpleName() + ": Coudn't load favorites count for " + player);
 		}
 		
 		return count;

@@ -102,6 +102,9 @@
 		<buff id="1045" level="1" price="0" desc="Increases maximum HP." /> 
 		<buff id="1048" level="1" price="0" desc="Increases maximum MP." /> 
 		<buff id="1303" level="1" price="0" desc="Increases crit. rate of magic attacks." /> 
+		<buff id="1388" level="1" price="0" desc="Increases P. Atk." /> 
+		<buff id="1389" level="1" price="0" desc="Increases P. Def." /> 
+		<buff id="1397" level="1" price="0" desc="Decreases MP consumption rate." /> 
 		<buff id="273" level="1" price="0" desc="Increases M. Atk." /> 
 		<buff id="276" level="1" price="0" desc="Increases Casting Spd." /> 
 		<buff id="365" level="1" price="0" desc="Increases rate of magic crit. damage." /> 
@@ -123,6 +126,12 @@
 		<buff id="1077" level="1" price="0" desc="Increases critical attack rate." /> 
 		<buff id="1086" level="1" price="0" desc="Increases Atk. Spd." /> 
 		<buff id="1242" level="1" price="0" desc="Increases critical attack." /> 
+		<buff id="1268" level="1" price="0" desc="Restores HP using inflicted damage." /> 
+		<buff id="1240" level="1" price="0" desc="Increases Accuracy." /> 
+		<buff id="1243" level="1" price="0" desc="Increases shield defense rate." /> 
+		<buff id="1304" level="1" price="0" desc="Increases shield defense power." /> 
+		<buff id="1388" level="1" price="0" desc="Increases P. Atk." /> 
+		<buff id="1389" level="1" price="0" desc="Increases P. Def." /> 
 		<buff id="271" level="1" price="0" desc="Increases P. Atk." /> 
 		<buff id="275" level="1" price="0" desc="Increases attack speed." /> 
 		<buff id="274" level="1" price="0" desc="Increases critical damage." /> 
