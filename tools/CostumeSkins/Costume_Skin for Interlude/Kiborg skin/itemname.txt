@@ -1,0 +1,2 @@
+10010	Costume Kiborg			-1					0	0	0	
+10019	Helmet Kiborg			-1					0	0	0	

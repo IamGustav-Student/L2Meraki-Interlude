@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+<item id="20092" name="Hellowen ">
+<for>
+  <mul val='1.05' order='0x30' stat='maxHp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+</for>
+</item>
+</list>

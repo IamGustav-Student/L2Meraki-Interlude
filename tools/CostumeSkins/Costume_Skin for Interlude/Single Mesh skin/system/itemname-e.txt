@@ -1,0 +1,1 @@
+9700	Single Mesh Armor		a,	-1	a,	a,	a,	a,	0	0	0	a,Change into Single Mesh in a certain area.\0

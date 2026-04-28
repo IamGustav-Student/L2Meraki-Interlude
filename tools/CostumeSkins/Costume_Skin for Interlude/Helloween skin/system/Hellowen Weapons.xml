@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+<item id="50040" name="Hellowen Avanger">
+<for>
+  <mul val='1.05' order='0x30' stat='maxHp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+</for>
+</item>
+
+<item id="50041" name="Hellowen Buster">
+<for>
+  <mul val='1.05' order='0x30' stat='maxHp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+</for>
+</item>
+
+<item id="50042" name="Hellowen Caster">
+<for>
+  <mul val='1.05' order='0x30' stat='maxHp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+</for>
+</item>
+
+<item id="50043" name="Hellowen Cutter">
+<for>
+  <mul val='1.05' order='0x30' stat='maxHp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+</for>
+</item>
+
+<item id="50044" name="Hellowen Fang">
+<for>
+  <mul val='1.05' order='0x30' stat='maxHp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+</for>
+</item>
+
+
+<item id="50045" name="Hellowen Retribut">
+<for>
+  <mul val='1.05' order='0x30' stat='maxHp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+</for>
+</item>
+
+<item id="50046" name="Hellowen Shaper">
+<for>
+  <mul val='1.05' order='0x30' stat='maxHp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+</for>
+</item>
+
+<item id="50047" name="Hellowen Shield">
+<for>
+  <mul val='1.05' order='0x30' stat='maxHp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+</for>
+</item>
+
+<item id="50048" name="Hellowen Slasher">
+<for>
+  <mul val='1.05' order='0x30' stat='maxHp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+</for>
+</item>
+
+<item id="50049" name="Hellowen Stormer">
+<for>
+  <mul val='1.05' order='0x30' stat='maxHp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+</for>
+</item>
+
+<item id="50050" name="Hellowen Bow">
+<for>
+  <mul val='1.05' order='0x30' stat='maxHp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+  <mul val='1.05' order='0x30' stat='maxCp'/>
+</for>
+</item>
+</list>

@@ -1,0 +1,19 @@
+50046	Halloween Shaper [1 LvL]	rhand	true	1420	1	1	adamantaite	s	271	5	dagger	12	-4	0	0	0	433	0	148	-1	8680000	1464	true	true	true	true	0	0	0	0	0	0	0	0	0	0	Icon.NOIMAGE
+50043	Halloween Cutter [1 LvL]	rhand	true	1420	1	1	adamantaite	s	325	10	sword	8	0	0	0	0	379	0	152	-1	8680000	1464	true	true	true	true	0	0	0	0	0	0	0	0	0	0	Icon.NOIMAGE
+50048	Halloween Slasher [1 LvL]	lrhand	true	1800	1	1	adamantaite	s	381	10	sword	8	0	0	0	0	325	0	151	-1	8680000	1464	true	true	true	true	0	0	0	0	0	0	0	0	0	0	Icon.NOIMAGE
+50044	Halloween Fang [1 LvL]	lrhand	true	1420	1	1	adamantaite	s	374	5	dualfist	4	5	0	0	0	325	0	152	-1	8680000	1464	true	true	true	true	0	0	0	0	0	0	0	0	0	0	Icon.NOIMAGE
+50049	Halloween Stormer [1 LvL]	lrhand	true	1800	1	1	adamantaite	s	334	10	pole	8	-4	0	0	0	325	0	152	-1	8680000	1464	true	true	true	true	0	0	0	0	0	0	0	0	0	0	Icon.NOIMAGE
+50050	Halloween Bow [1 LvL]	lrhand	true	1420	1	1	adamantaite	s	624	5	bow	12	-4	0	0	0	293	11	147	-1	8680000	1157	true	true	true	true	0	0	0	0	0	0	0	0	0	0	Icon.NOIMAGE
+50047	Halloween Shield [1 LvL]	lhand	true	1420	1	1	adamantaite	s	624	5	bow	12	-4	0	0	0	293	11	147	-1	8680000	1157	true	true	true	true	0	0	0	0	0	0	0	0	0	0	Icon.NOIMAGE
+50041	Halloween Burster [1 LvL]	rhand	true	1420	1	1	adamantaite	s	325	10	blunt	8	0	0	0	0	379	0	152	-1	8680000	1464	true	true	true	true	0	0	0	0	0	0	0	0	0	0	Icon.NOIMAGE
+50042	Halloween Caster [1 LvL]	rhand	true	1420	1	1	adamantaite	s	285	20	sword	4	5	0	0	0	379	0	202	-1	8680000	1157	true	true	true	true	0	0	0	0	0	0	0	0	0	0	Icon.NOIMAGE
+50045	Halloween Retribut [1 LvL]	rhand	true	1420	1	1	adamantaite	s	285	20	sword	4	5	0	0	0	379	0	202	-1	8680000	1157	true	true	true	true	0	0	0	0	0	0	0	0	0	0	Icon.NOIMAGE
+50040	Halloween Avanger [1 LvL]	rhand	true	1420	1	1	adamantaite	s	285	20	sword	4	5	0	0	0	379	0	202	-1	8680000	1157	true	true	true	true	0	0	0	0	0	0	0	0	0	0	Icon.NOIMAGE
+
+
+ARMOR !!!!!!!!!!!!!! <~~~~~~~~~~~~~~~~~~~~~~~~~
+20092	Halloween Armor	fullarmor	false	heavy	3067	leather	a	0	600	293	0	0	0	0	false	false	true	false	0	0	Icon.NOIMAGE
+
+
+
+Если что,просто скопируй и тыкни в свободную колонку в бд.

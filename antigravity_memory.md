@@ -2,6 +2,39 @@
 
 > **REGLA DE ORO**: Leer este archivo al iniciar cualquier tarea relacionada con la red, el servidor o el cliente de L2 Meraki.
 
+# Memoria Técnica: Integración de Customs (L2 Meraki)
+
+## Reglas de Oro para Archivos .DAT (Interlude)
+
+1.  **Simetría de Columnas (Armorgrp)**:
+    *   Interlude es extremadamente estricto con el conteo de columnas. En este servidor, el `armorgrp.dat` usa **332 columnas** (14 razas con sus respectivos modelos y texturas).
+    *   **Error Común**: Pegar líneas de otros packs (Gracia/H5) que tienen más o menos columnas causará el error "Error al guardar" en L2 FileEdit.
+    *   **Solución**: Siempre contar las pestañas (`\t`) y compararlas con una línea original funcional.
+
+2.  **Formato de ItemName-e**:
+    *   Cada campo de texto debe empezar con el prefijo **`a,`**.
+    *   Las descripciones DEBEN terminar con la cadena literal **`\\0`**. Si se usa un byte nulo real (`\0`), el editor o el cliente darán un crash fatal de tipo "Assertion failed".
+    *   La estructura estándar de este servidor es de **13 columnas**.
+
+3.  **Codificación y Herramientas**:
+    *   Los archivos de texto desencriptados deben guardarse en **UTF-16 LE con BOM**. Sin el BOM, herramientas como `l2asm` o `l2encdec` pueden malinterpretar los datos.
+    *   **L2 FileEdit**: Si da error "Cannot open file", usualmente es un error de sintaxis en el TXT o que el archivo `.ddf` no tiene el mismo nombre que el `.txt`.
+
+## Integración Servidor (Mobius Interlude)
+
+1.  **XML de Ítems**:
+    *   Usar siempre el atributo `val` (ej: `<set name="is_tradable" val="false" />`) en lugar de `value` para asegurar compatibilidad total con el core Mobius.
+    *   El atributo `default_action="EQUIP"` es vital para que el cliente permita usar la skin al hacer doble clic.
+
+2.  **Launcher y Assets**:
+    *   Todos los archivos `.ukx` (animaciones) y `.utx` (texturas) deben estar en sus carpetas respectivas en el servidor de actualizaciones.
+    *   Es obligatorio regenerar el `patch.json` después de añadir cualquier asset para que el Launcher calcule el hash MD5 y fuerce la descarga.
+
+## Historial de Skins Integradas (Abril 2026)
+*   **Crack Shot Pack**: IDs 9910-9914 (Blue, Gold, Pink, Red, Skull).
+*   **Costume Pack**: IDs 9930-9936 (JapanGeneral, White Knight, Valkyrie, Cat, Halloween, Ninja, Zaken).
+*   **Precios Sugeridos**: 10-15 Donation Coins por set completo.
+
 ## 🌐 Configuración de Red Actual
 - **IP Pública**: `181.2.153.30` (IP Dinámica - Verificar si falla la conexión).
 - **Puerto Login (Público)**: `2106`

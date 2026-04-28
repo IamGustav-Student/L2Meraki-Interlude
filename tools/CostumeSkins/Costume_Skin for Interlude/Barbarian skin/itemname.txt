@@ -1,0 +1,2 @@
+11002	Costume Beer			-1					0	0	0	
+11012	Helmet Beer			-1					0	0	0	

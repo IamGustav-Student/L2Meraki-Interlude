@@ -1,0 +1,2 @@
+131556	MultiCrazY Dark Helmet		u,Special MultiCrazY Helmet.\0	-1	u,	u,	u,	u,	0	0	0	u,
+131557	MultiCrazY Dark Suit		u,Special MultiCrazY Suit.\0	-1	u,	u,	u,	u,	0	0	0	u,

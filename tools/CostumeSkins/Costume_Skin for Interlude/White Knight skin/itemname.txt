@@ -1,0 +1,2 @@
+11005	Costume Fighter			-1					0	0	0	
+11015	Helmet Fighter			-1					0	0	0	

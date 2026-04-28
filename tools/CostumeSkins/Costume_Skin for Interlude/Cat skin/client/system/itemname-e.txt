@@ -1,0 +1,2 @@
+47300	Cat Costume		a,Cat Costume.\0	-1	a,	a,	a,	a,	0	0	0	a,
+47301	Cat Hat		a,Cat Costume.\0	-1	a,	a,	a,	a,	0	0	0	a,

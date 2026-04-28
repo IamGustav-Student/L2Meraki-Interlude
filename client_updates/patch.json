@@ -1,5 +1,80 @@
 [
     {
+        "Path": "MerakiUI.utx",
+        "Md5": "fd7d772e07b915f81acba3fecc10007e",
+        "Size": 215226
+    },
+    {
+        "Path": "Animations/CatArmor.ukx",
+        "Md5": "1af1998d73568a3d1d0dccb89a1ac9de",
+        "Size": 10539579
+    },
+    {
+        "Path": "Animations/halloween_avenger_m00.ukx",
+        "Md5": "6e11ce064013ef2b5ee19f6e14169f8f",
+        "Size": 20020
+    },
+    {
+        "Path": "Animations/halloween_burster_m00.ukx",
+        "Md5": "4b2521c138ff47411d6f3e2e6f2baf8f",
+        "Size": 16332
+    },
+    {
+        "Path": "Animations/halloween_caster_m00.ukx",
+        "Md5": "e56ebe883a6f7a6c592b53bdd418c644",
+        "Size": 23455
+    },
+    {
+        "Path": "Animations/halloween_cutter_m00.ukx",
+        "Md5": "1f7caa5558b10d3c0dd2b35406a3adad",
+        "Size": 18323
+    },
+    {
+        "Path": "Animations/halloween_fighter_m00.ukx",
+        "Md5": "8dd86da30340e9aaee4911a79fd167e8",
+        "Size": 22736
+    },
+    {
+        "Path": "Animations/halloween_retributer_m00.ukx",
+        "Md5": "7699db63abb72663637030490fa49166",
+        "Size": 27527
+    },
+    {
+        "Path": "Animations/halloween_shaper_m00.ukx",
+        "Md5": "76b2260fb42ed17c00f32ea84bf4deb4",
+        "Size": 19817
+    },
+    {
+        "Path": "Animations/halloween_shield_m00.ukx",
+        "Md5": "85c868dcc6d74a37efd26e5eba06420f",
+        "Size": 4514
+    },
+    {
+        "Path": "Animations/halloween_slasher_m00.ukx",
+        "Md5": "38d5d07b976be67f3f152aa19adf1252",
+        "Size": 17132
+    },
+    {
+        "Path": "Animations/halloween_stormer_m00.ukx",
+        "Md5": "90c672b491621c7b7a06103c2c2b7c80",
+        "Size": 25354
+    },
+    {
+        "Path": "Animations/halloween_thrower_m00.ukx",
+        "Md5": "401a4ace68005690ea8e7a8937ae13cc",
+        "Size": 27356
+    },
+    {
+        "Path": "Animations/JapanGeneral.ukx",
+        "Md5": "1de71d5101c881cecaac2a4f22f4df71",
+        "Size": 14643731
+    },
+    {
+        "Path": "Animations/LineageCustom3_ByLucifer.ukx",
+        "Md5": "2448a8a5b823450ca49102c8e096bdaf",
+        "Size": 15470998
+    },
+    {
         "Path": "Animations/LineageCustom_CrackShotBlue_L2Prague.ukx",
         "Md5": "118b008aa520aae8f8b5897fe9a8eac8",
         "Size": 24834281
@@ -25,6 +100,166 @@
         "Size": 25257916
     },
     {
+        "Path": "Animations/MultiCrazY_DarkArmor.ukx",
+        "Md5": "4ff5368dc7af36ee4c79c661282a1a38",
+        "Size": 13227809
+    },
+    {
+        "Path": "Animations/NevesOma_icq634024371_Cwbh_m003_a.ukx",
+        "Md5": "026ccd8867a89bb432838e29a4a68a3f",
+        "Size": 8007
+    },
+    {
+        "Path": "Animations/NevesOma_icq634024371_cybbD_m003_a.ukx",
+        "Md5": "6d2976e639c568e715ef567a21a71d13",
+        "Size": 14601
+    },
+    {
+        "Path": "Animations/NevesOma_icq634024371_destorus_costume_cby.ukx",
+        "Md5": "44197728c99f5249e6aec6a7392c0361",
+        "Size": 39940553
+    },
+    {
+        "Path": "Animations/NevesOma_icq634024371_destorus_kbr.ukx",
+        "Md5": "97242c25634102846f0f44bb2e074f3d",
+        "Size": 24890577
+    },
+    {
+        "Path": "Animations/RaccoonCustom01.ukx",
+        "Md5": "44561746ca226bba750823b327ae87ba",
+        "Size": 13021268
+    },
+    {
+        "Path": "Animations/RaccoonCustom02.ukx",
+        "Md5": "8e87cd21f395d71a22abcc5df7224935",
+        "Size": 18802447
+    },
+    {
+        "Path": "Animations/RaccoonCustom03.ukx",
+        "Md5": "91fffb475554fde4fe509f1a028db0fc",
+        "Size": 18934245
+    },
+    {
+        "Path": "Animations/RaccoonCustom04.ukx",
+        "Md5": "526359b697972c2cb33f2e4bcfa4e82c",
+        "Size": 25916931
+    },
+    {
+        "Path": "Animations/RaccoonCustom05.ukx",
+        "Md5": "7acd76776e13cee138518ddc93e8eb9e",
+        "Size": 9170424
+    },
+    {
+        "Path": "Animations/SHEV_InfinityOdyssey_FDarkElf.ukx",
+        "Md5": "b9e5caf53b79276fa7e8784d20eed7b8",
+        "Size": 6197475
+    },
+    {
+        "Path": "Animations/SHEV_InfinityOdyssey_FDwarf.ukx",
+        "Md5": "3dedc7012a1d66b14180cc65e890412a",
+        "Size": 5959998
+    },
+    {
+        "Path": "Animations/SHEV_InfinityOdyssey_FElf.ukx",
+        "Md5": "7d6b0dbc1d3e13e950e4e32c2b95a076",
+        "Size": 5381079
+    },
+    {
+        "Path": "Animations/SHEV_InfinityOdyssey_FFighter.ukx",
+        "Md5": "c8d72383e47155ff3cb9c48258e36b9a",
+        "Size": 5194613
+    },
+    {
+        "Path": "Animations/SHEV_InfinityOdyssey_FMagic.ukx",
+        "Md5": "4fbc783e88061e0b2b94f7d4d5d565db",
+        "Size": 4771561
+    },
+    {
+        "Path": "Animations/SHEV_InfinityOdyssey_FOrc.ukx",
+        "Md5": "f6188b7fe00183cb5ba23b35f4e16c0f",
+        "Size": 5225279
+    },
+    {
+        "Path": "Animations/SHEV_InfinityOdyssey_FShaman.ukx",
+        "Md5": "b3dd56cb0cca0ff78e63ab85cf4718f5",
+        "Size": 5704924
+    },
+    {
+        "Path": "Animations/SHEV_InfinityOdyssey_MDarkElf.ukx",
+        "Md5": "e56fa1737448fffe13c5ec6caaac75e9",
+        "Size": 4733521
+    },
+    {
+        "Path": "Animations/SHEV_InfinityOdyssey_MDwarf.ukx",
+        "Md5": "8c4f329d2f2f24753a5a48fe3d192c25",
+        "Size": 4329392
+    },
+    {
+        "Path": "Animations/SHEV_InfinityOdyssey_MElf.ukx",
+        "Md5": "46f35f8d90f8396a72a2d79298e18376",
+        "Size": 3840608
+    },
+    {
+        "Path": "Animations/SHEV_InfinityOdyssey_MFighter.ukx",
+        "Md5": "d4ba05453e712260b39b8d5ca0516029",
+        "Size": 4852570
+    },
+    {
+        "Path": "Animations/SHEV_InfinityOdyssey_MMagic.ukx",
+        "Md5": "7c0925b7976c4dd38efd10d31d56f63a",
+        "Size": 4264448
+    },
+    {
+        "Path": "Animations/SHEV_InfinityOdyssey_MOrc.ukx",
+        "Md5": "2762d644a67f0ff85fee808c64d39ddf",
+        "Size": 4996936
+    },
+    {
+        "Path": "Animations/SHEV_InfinityOdyssey_MShaman.ukx",
+        "Md5": "abd8272aaa774eea875c3666975cd061",
+        "Size": 4849814
+    },
+    {
+        "Path": "Animations/SHEV_SingleMeshDarkElf.ukx",
+        "Md5": "4ca5fe2fc5f1f6a3a6d7221b3e8abd09",
+        "Size": 8004696
+    },
+    {
+        "Path": "Animations/SHEV_SingleMeshDwarf.ukx",
+        "Md5": "6f6211063fb2fc1b0f0f727fc57a79f4",
+        "Size": 7242970
+    },
+    {
+        "Path": "Animations/SHEV_SingleMeshElf.ukx",
+        "Md5": "7bf24be3ea7cc4f6470ccc9eb3c3c501",
+        "Size": 6445469
+    },
+    {
+        "Path": "Animations/SHEV_SingleMeshFigher.ukx",
+        "Md5": "92f136ddee09e8e5f2daa48f856476a0",
+        "Size": 4106484
+    },
+    {
+        "Path": "Animations/SHEV_SingleMeshMagic.ukx",
+        "Md5": "de0a77ef45220d3a9edfb330dda505e8",
+        "Size": 3976081
+    },
+    {
+        "Path": "Animations/SHEV_SingleMeshOrc.ukx",
+        "Md5": "c7d62e128dc936ff26aa0a79f6841677",
+        "Size": 7511682
+    },
+    {
+        "Path": "Animations/SHEV_SingleMeshShaman.ukx",
+        "Md5": "afc93ac9028f960bbf84a0bcb531df2a",
+        "Size": 7780811
+    },
+    {
+        "Path": "Animations/viRUS_Developments_Pack01.ukx",
+        "Md5": "206246178c50af1207be0d85b367f3c1",
+        "Size": 48148836
+    },
+    {
         "Path": "system/actionname-e.dat",
         "Md5": "c164efdf08caeaa0c97ccdd1446acc16",
         "Size": 6832
@@ -46,8 +281,8 @@
     },
     {
         "Path": "system/armorgrp.dat",
-        "Md5": "33fb5da77636be0a0e6b78112aaf4204",
-        "Size": 103728
+        "Md5": "b8eb8f75bf6394f612f04302519e59f8",
+        "Size": 102448
     },
     {
         "Path": "system/asiahm-medium.ttf",
@@ -275,9 +510,14 @@
         "Size": 238768
     },
     {
+        "Path": "system/itemname-e.crypt.dat",
+        "Md5": "6c9ac39c29ee68c18e020c8a53be7f20",
+        "Size": 352
+    },
+    {
         "Path": "system/itemname-e.dat",
-        "Md5": "25673edb6fade7554339c987b9913a0e",
-        "Size": 238768
+        "Md5": "ee9a220e1ffdd216ead5ccb2d5043cbe",
+        "Size": 243760
     },
     {
         "Path": "system/L2.exe",
@@ -708,5 +948,40 @@
         "Path": "system/zonename-e.dat",
         "Md5": "fe92d5ca89b4931d2f15496a162a61a3",
         "Size": 6064
+    },
+    {
+        "Path": "SysTextures/CatArmorTex.utx",
+        "Md5": "6b2792011e185daa9455912de0f8be82",
+        "Size": 5214651
+    },
+    {
+        "Path": "SysTextures/halloween_weapon.utx",
+        "Md5": "658e38554528cd75d4fcfa1bd54305c7",
+        "Size": 3681106
+    },
+    {
+        "Path": "SysTextures/JapanIcon.utx",
+        "Md5": "d08b7077b787306ab71eadfe4335ce1b",
+        "Size": 927
+    },
+    {
+        "Path": "SysTextures/NevesOma_icq634024371_cwTxTe.utx",
+        "Md5": "8d04998de8f724bf5191a8263ecb5664",
+        "Size": 700998
+    },
+    {
+        "Path": "SysTextures/NevesOma_icq634024371_destorusCBBtrx.utx",
+        "Md5": "84168dd09b068a7956d420c72267b8d3",
+        "Size": 1051211
+    },
+    {
+        "Path": "SysTextures/SHEV_InfinityOdysseyTex.utx",
+        "Md5": "41ebd8744421a0fb9d50969fa3d6f93d",
+        "Size": 94040125
+    },
+    {
+        "Path": "SysTextures/SHEV_SingleMeshTex.utx",
+        "Md5": "3165f9058484388b892cba21523fbdbf",
+        "Size": 1037809
     }
 ]

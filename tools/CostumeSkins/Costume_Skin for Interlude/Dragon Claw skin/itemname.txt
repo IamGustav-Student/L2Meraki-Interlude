@@ -1,0 +1,2 @@
+11001	Costume Dragon Claw			-1					0	0	0	
+11011	Helmet Dragon Claw			-1					0	0	0	

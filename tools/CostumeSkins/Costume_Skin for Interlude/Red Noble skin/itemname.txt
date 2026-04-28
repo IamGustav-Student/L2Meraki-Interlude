@@ -1,0 +1,2 @@
+11003	Costume Noblees			-1					0	0	0	
+11013	Helmet Noblees			-1					0	0	0	

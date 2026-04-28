@@ -1,0 +1,2 @@
+10011	Costume Cowboy			-1					0	0	0	
+10020	Helmet Cowboy			-1					0	0	0	

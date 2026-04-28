@@ -1,0 +1,15 @@
+50040	Halloween Avanger	[1 Уровень]	 	-1					0	0	0	
+50041	Halloween Buster	[1 Уровень]	 	-1					0	0	0	
+50042	Halloween Caster	[1 Уровень]	 	-1					0	0	0	
+50043	Halloween Cutter 	[1 Уровень]	 	-1					0	0	0	
+50044	Halloween Fang	[1 Уровень]	 	-1					0	0	0	
+50045	Halloween Retribut	[1 Уровень]	 	-1					0	0	0	
+50046	Halloween Shaper	[1 Уровень]	 	-1					0	0	0	
+50047	Halloween Shield	[1 Уровень]	 	-1					0	0	0	
+50048	Halloween Slasher	[1 Уровень]	 	-1					0	0	0	
+50049	Halloween Stormer	[1 Уровень]	 	-1					0	0	0	
+50050	Halloween Bow	[1 Уровень]	 	-1					0	0	0	
+
+20092	Halloween Armor	[1 Уровень]	 	-1					0	0	0	
+
+

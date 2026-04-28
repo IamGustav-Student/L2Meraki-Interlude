@@ -59,3 +59,9 @@ audit_results.txt
 # Media
 *.docx
 *.pdf
+
+# Large Binaries and Archives (Avoid GitHub 100MB limit)
+*.rar
+/MerakiLauncher/bin/Release/net6.0-windows/win-x64/publish/*.exe
+/publish_final/*.exe
+/tools/*.rar

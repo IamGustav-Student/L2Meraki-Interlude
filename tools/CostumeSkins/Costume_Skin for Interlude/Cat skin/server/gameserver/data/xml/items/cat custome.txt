@@ -1,0 +1,13 @@
+	<item id="47300" type="Armor" name="Cat Costume">
+		<set name="default_action" val="equip" />
+		<set name="armor_type" val="NONE" />
+		<set name="bodypart" val="alldress" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="price" val="5000000" />
+	</item>
+	<item id="47301" type="Armor" name="Cat Hat">
+		<set name="default_action" val="equip" />
+		<set name="bodypart" val="hairall" />
+		<set name="weight" val="10" />
+	</item>
