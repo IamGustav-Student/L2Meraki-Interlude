@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<item><ingredient id="4037" count="10" /><production id="9910" count="1" /></item>
+	<item><ingredient id="4037" count="10" /><production id="9911" count="1" /></item>
+	<item><ingredient id="4037" count="10" /><production id="9912" count="1" /></item>
+	<item><ingredient id="4037" count="10" /><production id="9913" count="1" /></item>
+	<item><ingredient id="4037" count="10" /><production id="9914" count="1" /></item>
+	<item><ingredient id="4037" count="15" /><production id="9930" count="1" /></item>
+	<item><ingredient id="4037" count="15" /><production id="9931" count="1" /></item>
+	<item><ingredient id="4037" count="15" /><production id="9933" count="1" /></item>
+</list>

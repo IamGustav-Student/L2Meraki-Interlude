@@ -275,11 +275,6 @@
         "Size": 238768
     },
     {
-        "Path": "system/itemname-e.crypt.dat",
-        "Md5": "6c9ac39c29ee68c18e020c8a53be7f20",
-        "Size": 352
-    },
-    {
         "Path": "system/itemname-e.dat",
         "Md5": "25673edb6fade7554339c987b9913a0e",
         "Size": 238768
