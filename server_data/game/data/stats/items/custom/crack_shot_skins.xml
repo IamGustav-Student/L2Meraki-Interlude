@@ -4,86 +4,86 @@
 	<item id="9910" name="Crack Shot Blue Outfit" type="Armor">
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" value="onepiece" />
-		<set name="crystal_type" value="NONE" />
-		<set name="material" value="CLOTH" />
-		<set name="weight" value="1000" />
-		<set name="is_tradable" value="true" />
-		<set name="is_dropable" value="true" />
-		<set name="is_sellable" value="true" />
+		<set name="bodypart" val="onepiece" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="true" />
 	</item>
 	<item id="9911" name="Crack Shot Gold Outfit" type="Armor">
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" value="onepiece" />
-		<set name="crystal_type" value="NONE" />
-		<set name="material" value="CLOTH" />
-		<set name="weight" value="1000" />
+		<set name="bodypart" val="onepiece" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
 	</item>
 	<item id="9912" name="Crack Shot Pink Outfit" type="Armor">
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" value="onepiece" />
-		<set name="crystal_type" value="NONE" />
-		<set name="material" value="CLOTH" />
-		<set name="weight" value="1000" />
+		<set name="bodypart" val="onepiece" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
 	</item>
 	<item id="9913" name="Crack Shot Red Outfit" type="Armor">
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" value="onepiece" />
-		<set name="crystal_type" value="NONE" />
-		<set name="material" value="CLOTH" />
-		<set name="weight" value="1000" />
+		<set name="bodypart" val="onepiece" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
 	</item>
 	<item id="9914" name="Crack Shot Grey Outfit" type="Armor">
 		<set name="icon" val="icon.armor_t91_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" value="onepiece" />
-		<set name="crystal_type" value="NONE" />
-		<set name="material" value="CLOTH" />
-		<set name="weight" value="1000" />
+		<set name="bodypart" val="onepiece" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
 	</item>
 
 	<!-- Crack Shot Masks -->
 	<item id="9810" name="Crack Shot Blue Mask" type="Armor">
 		<set name="icon" val="icon.etc_fairies_pendant_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" value="dhair" />
-		<set name="crystal_type" value="NONE" />
-		<set name="material" value="CLOTH" />
-		<set name="weight" value="10" />
+		<set name="bodypart" val="hair" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="9811" name="Crack Shot Gold Mask" type="Armor">
 		<set name="icon" val="icon.etc_fairies_pendant_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" value="dhair" />
-		<set name="crystal_type" value="NONE" />
-		<set name="material" value="CLOTH" />
-		<set name="weight" value="10" />
+		<set name="bodypart" val="hair" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="9812" name="Crack Shot Pink Mask" type="Armor">
 		<set name="icon" val="icon.etc_fairies_pendant_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" value="dhair" />
-		<set name="crystal_type" value="NONE" />
-		<set name="material" value="CLOTH" />
-		<set name="weight" value="10" />
+		<set name="bodypart" val="hair" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="9813" name="Crack Shot Red Mask" type="Armor">
 		<set name="icon" val="icon.etc_fairies_pendant_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" value="dhair" />
-		<set name="crystal_type" value="NONE" />
-		<set name="material" value="CLOTH" />
-		<set name="weight" value="10" />
+		<set name="bodypart" val="hair" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="10" />
 	</item>
 	<item id="9814" name="Crack Shot Grey Mask" type="Armor">
 		<set name="icon" val="icon.etc_fairies_pendant_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" value="dhair" />
-		<set name="crystal_type" value="NONE" />
-		<set name="material" value="CLOTH" />
-		<set name="weight" value="10" />
+		<set name="bodypart" val="hair" />
+		<set name="crystal_type" val="NONE" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="10" />
 	</item>
 </list>
