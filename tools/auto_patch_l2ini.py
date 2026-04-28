@@ -7,9 +7,9 @@ TOOLS_DIR = r"f:\Programador GS\L2 Meraki\tools"
 SYSTEM_DIR = r"f:\Programador GS\L2 Meraki\system_master\system"
 L2ENCDEC = os.path.join(TOOLS_DIR, "l2encdec.exe")
 
-# DATOS DE PLAYIT.GG
-NEW_IP = "electronics-retailer.gl.at.ply.gg"
-NEW_PORT = "46693"
+# DATOS PUBLICOS
+NEW_IP = "181.2.153.30"
+NEW_PORT = "2106"
 
 def run_command(cmd):
     print(f"Ejecutando: {' '.join(cmd)}")
