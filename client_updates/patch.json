@@ -260,6 +260,11 @@
         "Size": 491540
     },
     {
+        "Path": "system\\l2.ini",
+        "Md5": "131a3e4a72453a363b721de6711016a1",
+        "Size": 3376
+    },
+    {
         "Path": "system\\l2.int",
         "Md5": "b587a9068b55dc2de7f6c1244cddb446",
         "Size": 163

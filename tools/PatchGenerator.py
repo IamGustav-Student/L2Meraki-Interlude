@@ -26,11 +26,14 @@ def generate_patch():
     for root, dirs, files in os.walk(INPUT_DIR):
         for file in files:
             full_path = os.path.join(root, file)
-            rel_path = os.path.relpath(full_path, INPUT_DIR)
+            rel_path = os.path.relpath(full_path, INPUT_DIR).replace('\\', '/')
             
             # Skip launcher itself or hidden files
             if file == "MerakiLauncher.exe" or file.startswith("."):
+                print(f"Skipping excluded file: {file}")
                 continue
+            
+            print(f"Adding to patch: {rel_path}")
                 
             md5 = get_md5(full_path)
             size = os.path.getsize(full_path)
