@@ -1,5 +1,30 @@
 [
     {
+        "Path": "Animations/LineageCustom_CrackShotBlue_L2Prague.ukx",
+        "Md5": "118b008aa520aae8f8b5897fe9a8eac8",
+        "Size": 24834281
+    },
+    {
+        "Path": "Animations/LineageCustom_CrackShotGold_L2Prague.ukx",
+        "Md5": "7f9fcddc92f343cd4b3b7278cbd10042",
+        "Size": 24851244
+    },
+    {
+        "Path": "Animations/LineageCustom_CrackShotPink_L2Prague.ukx",
+        "Md5": "91a5db811930a64fd23cedc867fc405d",
+        "Size": 25196204
+    },
+    {
+        "Path": "Animations/LineageCustom_CrackShotRed_L2Prague.ukx",
+        "Md5": "12d22243b70ac727d6a7b785df81fb50",
+        "Size": 25244362
+    },
+    {
+        "Path": "Animations/LineageCustom_CrackShotSkull_L2Prague.ukx",
+        "Md5": "4278dece61a2d25b07674142ac1348eb",
+        "Size": 25257916
+    },
+    {
         "Path": "system/actionname-e.dat",
         "Md5": "c164efdf08caeaa0c97ccdd1446acc16",
         "Size": 6832
@@ -15,9 +40,14 @@
         "Size": 2658
     },
     {
+        "Path": "system/armorgrp copy.dat",
+        "Md5": "dac53a06c1dc9fc9f9b2a39c78b6900a",
+        "Size": 103728
+    },
+    {
         "Path": "system/armorgrp.dat",
-        "Md5": "6b9d82f371acf0f543ea21f581498799",
-        "Size": 101552
+        "Md5": "dac53a06c1dc9fc9f9b2a39c78b6900a",
+        "Size": 103728
     },
     {
         "Path": "system/asiahm-medium.ttf",
@@ -240,13 +270,18 @@
         "Size": 73703
     },
     {
+        "Path": "system/itemname-e copy.dat",
+        "Md5": "25673edb6fade7554339c987b9913a0e",
+        "Size": 238768
+    },
+    {
         "Path": "system/itemname-e.crypt.dat",
         "Md5": "6c9ac39c29ee68c18e020c8a53be7f20",
         "Size": 352
     },
     {
         "Path": "system/itemname-e.dat",
-        "Md5": "bc14eff18c030168803c05d43b659eac",
+        "Md5": "25673edb6fade7554339c987b9913a0e",
         "Size": 238768
     },
     {

@@ -4,7 +4,7 @@
 		<!-- Passive VIP Skill: Enhanced rates and stats. -->
 		<table name="#rExp">1.2 1.5 2.0</table>
 		<table name="#spd">1.05 1.10 1.15</table>
-		<table name="#weight">1.2 1.5 2.0</table>
+		<table name="#weight">1.0 1.5 2.0</table>
 		<icon>icon.skill1323</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../data/xsd/classMaster.xsd">
-	<classMaster classChangeEnabled="true" spawnClassMasters="true" showPopupWindow="true">
+	<classMaster classChangeEnabled="true" spawnClassMasters="false" showPopupWindow="true">
 		<classChangeOption name="Free">
 			<appliesTo>
 				<category>FIRST_CLASS_GROUP</category>

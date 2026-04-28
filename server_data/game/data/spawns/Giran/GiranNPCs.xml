@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="GiranNPCs">
+		<npc id="900009" x="82485" y="148485" z="-3468" heading="0" /> <!-- Meraki Transmog Manager -->
 		<npc id="30080" x="83396" y="147904" z="-3404" heading="16384" respawnDelay="60" /> <!-- Clarissa -->
 		<npc id="30990" x="83331" y="147905" z="-3400" heading="16700" respawnDelay="5" /> <!-- Lottery Ticket Seller -->
 		<npc id="31081" x="83369" y="149273" z="-3400" heading="32500" respawnDelay="60" /> <!-- Priest of Dawn -->
