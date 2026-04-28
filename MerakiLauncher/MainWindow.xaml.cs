@@ -62,6 +62,8 @@ namespace MerakiLauncher
 
                 foreach (var file in remoteFiles)
                 {
+                    if (string.IsNullOrWhiteSpace(file.Path)) continue; // Blindaje: ignora rutas vacias
+                    
                     if (NeedsUpdate(file))
                     {
                         _filesToUpdate.Add(file);
