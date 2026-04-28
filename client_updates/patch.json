@@ -275,11 +275,6 @@
         "Size": 2658
     },
     {
-        "Path": "system/armorgrp copy.dat",
-        "Md5": "dac53a06c1dc9fc9f9b2a39c78b6900a",
-        "Size": 103728
-    },
-    {
         "Path": "system/armorgrp.dat",
         "Md5": "b8eb8f75bf6394f612f04302519e59f8",
         "Size": 102448
@@ -503,16 +498,6 @@
         "Path": "system/IpDrv.u",
         "Md5": "e37822ca6bd9ded36858ebbe91f5a6ba",
         "Size": 73703
-    },
-    {
-        "Path": "system/itemname-e copy.dat",
-        "Md5": "25673edb6fade7554339c987b9913a0e",
-        "Size": 238768
-    },
-    {
-        "Path": "system/itemname-e.crypt.dat",
-        "Md5": "6c9ac39c29ee68c18e020c8a53be7f20",
-        "Size": 352
     },
     {
         "Path": "system/itemname-e.dat",
