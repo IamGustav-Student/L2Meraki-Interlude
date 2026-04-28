@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/items.xsd">
 	<!-- Crack Shot Outfits -->
 	<item id="9910" name="Crack Shot Blue Outfit" type="Armor">
-		<set name="bodypart" value="lrhand" /> <!-- Usamos un slot que no interfiera mucho para pruebas -->
+		<set name="bodypart" value="fullarmor" />
 		<set name="crystal_type" value="NONE" />
 		<set name="material" value="CLOTH" />
 		<set name="weight" value="1000" />
@@ -11,25 +11,25 @@
 		<set name="is_sellable" value="true" />
 	</item>
 	<item id="9911" name="Crack Shot Gold Outfit" type="Armor">
-		<set name="bodypart" value="lrhand" />
+		<set name="bodypart" value="fullarmor" />
 		<set name="crystal_type" value="NONE" />
 		<set name="material" value="CLOTH" />
 		<set name="weight" value="1000" />
 	</item>
 	<item id="9912" name="Crack Shot Pink Outfit" type="Armor">
-		<set name="bodypart" value="lrhand" />
+		<set name="bodypart" value="fullarmor" />
 		<set name="crystal_type" value="NONE" />
 		<set name="material" value="CLOTH" />
 		<set name="weight" value="1000" />
 	</item>
 	<item id="9913" name="Crack Shot Red Outfit" type="Armor">
-		<set name="bodypart" value="lrhand" />
+		<set name="bodypart" value="fullarmor" />
 		<set name="crystal_type" value="NONE" />
 		<set name="material" value="CLOTH" />
 		<set name="weight" value="1000" />
 	</item>
 	<item id="9914" name="Crack Shot Grey Outfit" type="Armor">
-		<set name="bodypart" value="lrhand" />
+		<set name="bodypart" value="fullarmor" />
 		<set name="crystal_type" value="NONE" />
 		<set name="material" value="CLOTH" />
 		<set name="weight" value="1000" />
@@ -37,31 +37,31 @@
 
 	<!-- Crack Shot Masks -->
 	<item id="9810" name="Crack Shot Blue Mask" type="Armor">
-		<set name="bodypart" value="hair" />
+		<set name="bodypart" value="dhair" />
 		<set name="crystal_type" value="NONE" />
 		<set name="material" value="CLOTH" />
 		<set name="weight" value="10" />
 	</item>
 	<item id="9811" name="Crack Shot Gold Mask" type="Armor">
-		<set name="bodypart" value="hair" />
+		<set name="bodypart" value="dhair" />
 		<set name="crystal_type" value="NONE" />
 		<set name="material" value="CLOTH" />
 		<set name="weight" value="10" />
 	</item>
 	<item id="9812" name="Crack Shot Pink Mask" type="Armor">
-		<set name="bodypart" value="hair" />
+		<set name="bodypart" value="dhair" />
 		<set name="crystal_type" value="NONE" />
 		<set name="material" value="CLOTH" />
 		<set name="weight" value="10" />
 	</item>
 	<item id="9813" name="Crack Shot Red Mask" type="Armor">
-		<set name="bodypart" value="hair" />
+		<set name="bodypart" value="dhair" />
 		<set name="crystal_type" value="NONE" />
 		<set name="material" value="CLOTH" />
 		<set name="weight" value="10" />
 	</item>
 	<item id="9814" name="Crack Shot Grey Mask" type="Armor">
-		<set name="bodypart" value="hair" />
+		<set name="bodypart" value="dhair" />
 		<set name="crystal_type" value="NONE" />
 		<set name="material" value="CLOTH" />
 		<set name="weight" value="10" />
