@@ -3,8 +3,8 @@ import hashlib
 import json
 
 # CONFIGURATION
-INPUT_DIR = "../system_master" # Folder containing the updated files
-OUTPUT_DIR = "../client_updates" # Subfolder in your repo
+INPUT_DIR = r"f:\Programador GS\L2 Meraki\system_master"
+OUTPUT_DIR = r"f:\Programador GS\L2 Meraki\client_updates"
 MANIFEST_FILE = "patch.json"
 
 def get_md5(file_path):
