@@ -245,14 +245,9 @@
         "Size": 2658
     },
     {
-        "Path": "system/armorgrp copy.dat",
-        "Md5": "dac53a06c1dc9fc9f9b2a39c78b6900a",
-        "Size": 103728
-    },
-    {
         "Path": "system/armorgrp.dat",
-        "Md5": "956363ca76d2c88b059fd03cef8730e5",
-        "Size": 102704
+        "Md5": "4aa23a49f2d8015a8b47faac14476b78",
+        "Size": 115248
     },
     {
         "Path": "system/asiahm-medium.ttf",
@@ -440,14 +435,9 @@
         "Size": 1840
     },
     {
-        "Path": "system/itemname-e copy.dat",
-        "Md5": "25673edb6fade7554339c987b9913a0e",
-        "Size": 238768
-    },
-    {
         "Path": "system/itemname-e.dat",
-        "Md5": "5879767e65d492a6e9e1dbe4f6a180f4",
-        "Size": 304
+        "Md5": "6557a070e218e233cbe0357ede62c0a3",
+        "Size": 238768
     },
     {
         "Path": "system/L2.exe",
