@@ -1,0 +1,4 @@
+60000	Samurai Outfit	a,Samurai Skin\0	a,Increases appearance by applying Samurai Skin.\0	-1	a,	a,	a,	a,	0	0	0	a,
+60001	Halloween Outfit	a,Halloween Skin\0	a,Increases appearance by applying Halloween Skin.\0	-1	a,	a,	a,	a,	0	0	0	a,
+60002	Ninja Outfit	a,Ninja Skin\0	a,Increases appearance by applying Ninja Skin.\0	-1	a,	a,	a,	a,	0	0	0	a,
+60003	Zaken Outfit	a,Zaken Skin\0	a,Increases appearance by applying Zaken Skin.\0	-1	a,	a,	a,	a,	0	0	0	a,
