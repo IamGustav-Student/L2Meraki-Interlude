@@ -59,10 +59,13 @@ namespace MerakiLauncher
 
                 StatusLabel.Text = "Verifying files...";
                 _filesToUpdate.Clear();
+                HashSet<string> remotePaths = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
                 foreach (var file in remoteFiles)
                 {
-                    if (string.IsNullOrWhiteSpace(file.Path)) continue; // Blindaje: ignora rutas vacias
+                    if (string.IsNullOrWhiteSpace(file.Path)) continue;
+                    string normalizedPath = file.Path.Replace("/", "\\");
+                    remotePaths.Add(normalizedPath);
                     
                     if (NeedsUpdate(file))
                     {
@@ -70,6 +73,9 @@ namespace MerakiLauncher
                         Log($"Update needed: {file.Path}");
                     }
                 }
+
+                // Delete local files that are not in the manifest (Sync with server)
+                await Task.Run(() => CleanupObsoleteFiles(remotePaths));
 
                 if (_filesToUpdate.Count > 0)
                 {
@@ -94,6 +100,31 @@ namespace MerakiLauncher
             }
         }
 
+        private void CleanupObsoleteFiles(HashSet<string> remotePaths)
+        {
+            string[] criticalFolders = { "Animations", "SysTextures", "system" };
+            foreach (var folder in criticalFolders)
+            {
+                try {
+                    if (!Directory.Exists(folder)) continue;
+                    var localFiles = Directory.GetFiles(folder, "*.*", SearchOption.AllDirectories);
+                    foreach (var localFile in localFiles)
+                    {
+                        // Get relative path for comparison
+                        string relativePath = Path.GetRelativePath(AppDomain.CurrentDomain.BaseDirectory, localFile);
+                        
+                        if (!remotePaths.Contains(relativePath))
+                        {
+                            Log($"[CLEANUP] Deleting obsolete/corrupt file: {relativePath}");
+                            File.Delete(localFile);
+                        }
+                    }
+                } catch (Exception ex) {
+                    Log($"[CLEANUP ERROR] {ex.Message}");
+                }
+            }
+        }
+
         private void Log(string message)
         {
             try {
@@ -103,12 +134,14 @@ namespace MerakiLauncher
 
         private bool NeedsUpdate(PatchFile file)
         {
-            if (!File.Exists(file.Path)) return true;
-            using var md5 = MD5.Create();
-            using var stream = File.OpenRead(file.Path);
-            byte[] hash = md5.ComputeHash(stream);
-            string localMd5 = BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
-            return localMd5 != file.Md5.ToLowerInvariant();
+            try {
+                if (!File.Exists(file.Path)) return true;
+                using var md5 = MD5.Create();
+                using var stream = File.OpenRead(file.Path);
+                byte[] hash = md5.ComputeHash(stream);
+                string localMd5 = BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
+                return localMd5 != file.Md5.ToLowerInvariant();
+            } catch { return true; }
         }
 
         private async Task DownloadFiles()
@@ -117,12 +150,17 @@ namespace MerakiLauncher
             int count = 0;
             foreach (var file in _filesToUpdate)
             {
-                Log($"Downloading: {file.Path}");
-                StatusLabel.Text = $"Downloading {Path.GetFileName(file.Path)}...";
-                Directory.CreateDirectory(Path.GetDirectoryName(file.Path) ?? ".");
-                
-                var bytes = await client.GetByteArrayAsync(BASE_URL + "files/" + file.Path.Replace("\\", "/"));
-                await File.WriteAllBytesAsync(file.Path, bytes);
+                try {
+                    Log($"Downloading: {file.Path}");
+                    StatusLabel.Text = $"Downloading {Path.GetFileName(file.Path)}...";
+                    string dir = Path.GetDirectoryName(file.Path);
+                    if (!string.IsNullOrEmpty(dir)) Directory.CreateDirectory(dir);
+                    
+                    var bytes = await client.GetByteArrayAsync(BASE_URL + "files/" + file.Path.Replace("\\", "/"));
+                    await File.WriteAllBytesAsync(file.Path, bytes);
+                } catch (Exception ex) {
+                    Log($"[DOWNLOAD ERROR] {file.Path}: {ex.Message}");
+                }
                 
                 count++;
                 UpdateProgress.Value = (double)count / _filesToUpdate.Count * 100;

@@ -20,6 +20,23 @@
     *   Los archivos de texto desencriptados deben guardarse en **UTF-16 LE con BOM**. Sin el BOM, herramientas como `l2asm` o `l2encdec` pueden malinterpretar los datos.
     *   **L2 FileEdit**: Si da error "Cannot open file", usualmente es un error de sintaxis en el TXT o que el archivo `.ddf` no tiene el mismo nombre que el `.txt`.
 
+### 4. Gestión del Launcher y Actualizaciones (Abril 2026)
+*   **Error Crítico del "Archivo Suelto"**: 
+    *   *Problema*: Si un archivo está en la raíz de la carpeta de parches (ej. `MerakiUI.utx`) sin estar dentro de una subcarpeta, el Launcher colapsa con el error `Parameter 'path' cannot be empty`. Esto sucede porque `Path.GetDirectoryName` devuelve una cadena vacía y `Directory.CreateDirectory("")` es una operación ilegal en .NET.
+    *   *Solución Estructural*: Todos los archivos DEBEN estar dentro de una carpeta (`system/`, `SysTextures/`, `Animations/`).
+    *   *Solución de Código*: Se blindó `MainWindow.xaml.cs` con la instrucción `if (string.IsNullOrWhiteSpace(file.Path)) continue;` para ignorar entradas corruptas.
+*   **Integridad del Manifiesto**:
+    *   Los archivos `patch.json` deben ser **UTF-8 puro (sin BOM)** y preferiblemente **minificados**. Cualquier salto de línea o byte nulo (`\0`) puede corromper la lectura del JSON en el cliente.
+*   **Generación Robusta**:
+    *   El script `GenerateManifest.py` ahora incluye una **Blacklist** automática para ignorar archivos `.bak`, `.tmp`, `.copy` y archivos ocultos, evitando que basura técnica llegue a los testers.
+
+### 5. IDs de Skins Actualizados
+*   60000: Samurai
+*   60001: Halloween
+*   60002: Ninja
+*   60003: Zaken
+*   60004-60008: Crack Shot (Skull, Red, Gold, Pink, Blue)
+
 ## Integración Servidor (Mobius Interlude)
 
 1.  **XML de Ítems**:
