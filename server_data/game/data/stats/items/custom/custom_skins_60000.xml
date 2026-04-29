@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/items.xsd">
+	<!-- Samurai Skin -->
+	<item id="60000" name="Samurai Outfit" type="Armor">
+		<set name="icon" val="icon.armor_t91_u_i00" />
+		<set name="bodypart" val="onepiece" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_stackable" val="false" />
+	</item>
+
+	<!-- Halloween Skin -->
+	<item id="60001" name="Halloween Outfit" type="Armor">
+		<set name="icon" val="icon.etc_skeleton_m_i00" />
+		<set name="bodypart" val="onepiece" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_stackable" val="false" />
+	</item>
+
+	<!-- Ninja Skin -->
+	<item id="60002" name="Ninja Outfit" type="Armor">
+		<set name="icon" val="icon.armor_t89_u_i00" />
+		<set name="bodypart" val="onepiece" />
+		<set name="material" val="CLOTH" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_stackable" val="false" />
+	</item>
+
+	<!-- Zaken Skin -->
+	<item id="60003" name="Zaken Outfit" type="Armor">
+		<set name="icon" val="icon.etc_zaken_mask_i00" />
+		<set name="bodypart" val="onepiece" />
+		<set name="material" val="LEATHER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="true" />
+		<set name="is_stackable" val="false" />
+	</item>
+</list>
